@@ -33,7 +33,10 @@ Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je 
 ###Akteri
 
 - Upravnik zatvora (potpuna kontrola sistema)
-- 
-
-
-
+- Upravnici sektora (kontrola nad sektorom)
+- Finansijski savjetnik (kontorlisanje budžeta)
+- Medicinski radnici (pristup zdravstvenim kartonima zatvorenika i izmjena istih)
+- Radnici u kantini (pristup resursima kantine)
+- Stražari (na ogradi/zidu, mogućnost paljenja alarma)
+- Čuvari (unutar zatvora, mogućnost paljenja alarma i kontrole ćelija)
+- Zatvorenici 
