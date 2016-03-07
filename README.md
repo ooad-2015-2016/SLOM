@@ -21,17 +21,19 @@ Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je 
 
 ###Funkcionalnosti
 
--Mogućnost stvaranja profila zatvorenika
--Mogućnost uvida u profil zatvorenika
--Mogućnost praćenja zatvorenika
--Mogućnost komunikacije sa čuvarima
--Mogućnost regulacije osvjetljenja i temperature po sektorima
--Mogućnost praćenja stanja resursa u svim segmetima zatvora (npr. kantina, ambulanta)
--Mogućnost kontrole vrata
--Mogućnost prijave sa različitim privilegijama
+- Mogućnost stvaranja profila zatvorenika
+- Mogućnost uvida u profil zatvorenika
+- Mogućnost praćenja zatvorenika
+- Mogućnost komunikacije sa čuvarima
+- Mogućnost regulacije osvjetljenja i temperature po sektorima
+- Mogućnost praćenja stanja resursa u svim segmetima zatvora (npr. kantina, ambulanta)
+- Mogućnost kontrole vrata
+- Mogućnost prijave sa različitim privilegijama
 
+###Akteri
 
-
+- Upravnik zatvora (potpuna kontrola sistema)
+- 
 
 
 
