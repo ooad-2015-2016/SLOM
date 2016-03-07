@@ -12,12 +12,12 @@ Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je 
 
 ###Procesi i funkcionalnost
 
--Zatvorenik dolazi u zatvor te mu se stvara dosje (ako ga već nema) sa svim podacima o tom zatvoreniku. U toku stvaranja profila zatvorenika se vrši zapis o stvarima koje je zatvorenik imao te se podvrgava ljekarskom pregledu, te mu se otvara zdravstveni karton i vrši se čipovanje zatovrenika s ciljem da se u svakom trenutku zna njegov položaj. Nakon kreiranja profila, zatvorenik se smješta u odgovarajuću ćeliju. Ovaj cjelokupan proces nadgleda čuvar.
--Također bit će omogućen proces tekstualne komunikacije sa čuvarima.
--Bit će omogućena evidencija o posjetama, nadzor istih, kreiranje naloga za posjetu.
--U slučaju pobune ili bilo kakve druge potrebe biti će omugućeno otvaranje i zatvaranje ćelija ili sektora.
--Biti će omogućen proračun plata. 
--Proces podnošenja zahtjeva za uslovnu kaznu, privremeni dopust.
+- Zatvorenik dolazi u zatvor te mu se stvara dosje (ako ga već nema) sa svim podacima o tom zatvoreniku. U toku stvaranja profila zatvorenika se vrši zapis o stvarima koje je zatvorenik imao te se podvrgava ljekarskom pregledu, te mu se otvara zdravstveni karton i vrši se čipovanje zatovrenika s ciljem da se u svakom trenutku zna njegov položaj. Nakon kreiranja profila, zatvorenik se smješta u odgovarajuću ćeliju. Ovaj cjelokupan proces nadgleda čuvar.
+- Također bit će omogućen proces tekstualne komunikacije sa čuvarima.
+- Bit će omogućena evidencija o posjetama, nadzor istih, kreiranje naloga za posjetu.
+- U slučaju pobune ili bilo kakve druge potrebe biti će omugućeno otvaranje i zatvaranje ćelija ili sektora.
+- Biti će omogućen proračun plata. 
+- Proces podnošenja zahtjeva za uslovnu kaznu, privremeni dopust.
 
 ###Funkcionalnosti
 
