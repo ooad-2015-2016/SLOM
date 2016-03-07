@@ -8,7 +8,7 @@
 
 ###Opis teme
 
-Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je kazna jedna od mogućih kaznenih sankcija za počinitelje kaznenih djela. Ona se provodi lišavanjem slobode optuženika. Svrha sistema je centralizirano upravljanje i nadzor u gotovo svim segmentima jedne ovakve ustanove, počevši od prijema zatvorenika i kreiranja njegovog dosjea, smještanja u odgovarajći sektor i ćeliju u ovisnosti od težine kazne. Zatvor se sastoji od 3 sektora podjeljenih po težini prestupa. Upravnik zatora je supervizor i on ima pristup svim segmetnima sistema.
+Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je kazna jedna od mogućih kaznenih sankcija za počinitelje kaznenih djela. Ona se provodi lišavanjem slobode optuženika. Svrha sistema je centralizirano upravljanje i nadzor u gotovo svim segmentima jedne ovakve ustanove, počevši od prijema zatvorenika i kreiranja njegovog dosjea, smještanja u odgovarajći sektor i ćeliju u ovisnosti od težine kazne. Zatvor se sastoji od 3 sektora podjeljenih po težini prestupa. Upravnik zatvora je supervizor i on ima pristup svim segmetnima sistema.
 
 ###Procesi
 
