@@ -7,21 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjekatZatvor.Forme;
 
-namespace ProjekatZatvor
+namespace ProjekatZatvor.Forme
 {
-    public partial class Form1 : Form
+    public partial class KreiranjeDosjea : Form
     {
-        public Form1()
+        public KreiranjeDosjea()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            KreiranjeDosjea kd = new KreiranjeDosjea();
-            kd.Show();
+
         }
     }
 }

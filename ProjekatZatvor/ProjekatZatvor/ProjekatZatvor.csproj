@@ -52,8 +52,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\KreiranjeDosjea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KreiranjeDosjea.Designer.cs">
+      <DependentUpon>KreiranjeDosjea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klase\Cuvar.cs" />
+    <Compile Include="Klase\Dosje.cs" />
+    <Compile Include="Klase\FinansijskiSavjetnik.cs" />
+    <Compile Include="Klase\MedicnskiRadnik.cs" />
+    <Compile Include="Klase\RadnikUKantini.cs" />
+    <Compile Include="Klase\Strazar.cs" />
+    <Compile Include="Klase\Uposlenik.cs" />
+    <Compile Include="Klase\UpravnikZatvora.cs" />
+    <Compile Include="Klase\Zatvorenik.cs" />
+    <Compile Include="Klase\ZdravstveniKarton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KreiranjeDosjea.resx">
+      <DependentUpon>KreiranjeDosjea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
