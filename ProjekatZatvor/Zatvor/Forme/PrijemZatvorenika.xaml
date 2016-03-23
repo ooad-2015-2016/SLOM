@@ -1,10 +1,11 @@
 ﻿<Page
-    x:Class="Zatvor.PrijemZatvorenika"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Zatvor"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:System="using:System"
+    x:Class="Zatvor.PrijemZatvorenika"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="-160.993,-0.323,-9.677,79.68" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
@@ -33,16 +34,24 @@
         <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="30" Margin="21,233,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="145"/>
         <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Broj lične karte:" VerticalAlignment="Top" Width="145" Margin="21,286,0,0" RenderTransformOrigin="0.566,-0.857"/>
         <TextBox x:Name="tBrojLicneKarte" HorizontalAlignment="Left" Height="35" Margin="169,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296"/>
-        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Visina:" VerticalAlignment="Top" Width="145" Margin="21,344,0,0" RenderTransformOrigin="0.566,-0.857"/>
-        <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" Margin="166,344,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296"/>
-        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Margin="21,411,0,0" RenderTransformOrigin="0.566,-0.857">
-    		<Run Text="Težina:"/>
-    		<LineBreak/>
-    		<Run/>
-        </TextBlock>
-        <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="169,411,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296"/>
-        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="36" Margin="169,484,0,0" VerticalAlignment="Top" Width="192"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="89" Margin="328,10,0,0" VerticalAlignment="Top" Width="137"/>
+        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="36" Margin="210,391,0,0" VerticalAlignment="Top" Width="192"/>
+        <Image x:Name="iSlika" HorizontalAlignment="Left" Height="89" Margin="328,13,0,0" VerticalAlignment="Top" Width="137"/>
+        <RadioButton x:Name="radioButton" Content="Da" HorizontalAlignment="Left" Margin="21,393,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton1" Content="Ne" HorizontalAlignment="Left" Margin="21,424,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.165"/>
+        <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Osuđivan ranije:" VerticalAlignment="Top" Width="145" Margin="24,354,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" Margin="746,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="631,13,0,0" TextWrapping="Wrap" Text="Dodatni opis:" VerticalAlignment="Top" RenderTransformOrigin="0.787,0.041"/>
+        <Grid Margin="746,254,260.67,284.643">
+            <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Visina:" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.566,-0.857" Margin="-119,0,0,0"/>
+            <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="444"/>
+            <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="-119,57,0,0" RenderTransformOrigin="0.566,-0.857">
+				<Run Text="Težina:"/>
+				<LineBreak/>
+				<Run/>
+            </TextBlock>
+            <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="0,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="444"/>
+        </Grid>
+        <Button x:Name="button1" Content="Dodaj krivično djelo" HorizontalAlignment="Left" Height="37" Margin="879,388,0,0" VerticalAlignment="Top" Width="176"/>
 
     </Grid>
 </Page>
