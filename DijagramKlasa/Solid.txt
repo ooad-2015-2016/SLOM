@@ -1,0 +1,9 @@
+Prvi SOLID princip je ispoštovan zato što svaka od klasa ima samo jedan razlog za promijenu, tj. svaka klasa sadrži samo funkcije koje ne ovise od drugih klasa i ne mijenjaju stvari u drugim klasama ako su pozvane. Takoðer, svaka klasa ima pojedinaènu odgovornost.
+
+Drugi SOLID princip je ispoštovan jer su klase otvorene za nadogradnju a zatvorene za modifikacije (ne možemo mijenjati strukutru atributa). Na primjer, ako posmatramo klasu ProfilZatvorenika, u njoj možemo ažurirati podatke, ali ne možemo izbaciti neke atribute.
+
+Treæi SOLID princip nije zadovoljen. Liskov princip zamjene glasi: Podtipovi moraju biti zamjenjivi njihovim osnovnim tipovima. Ako posmatramo bilo koju klasu koja je naslijeðena iz klase Uposlenik, ne možemo ni jednu konkretnu klasu zamijeniti klasom Uposlenik, jer bi svaka od naslijeðenih klasa izgubile odreðene funkcije.
+
+Èetvrti SOLID princip nije zadovoljen, jer osnovna klasa iz koje smo naslijedili veæinu ostalih nije apstraktna. A èetvrti SOLID princip nalaže da sistem ne treba ovisiti od konkretnih klasa, tj. da je bolje ovisiti o apstrakcijama neko o stvarnim klasama.
+
+Peti SOLID princip je zadovoljen, jer je sistem osmišljen na taj naèin da ni jedan korisnik ne ovisi od metoda koje ne koristi. Na primjer, klasa MedicinskiRadnik ne ovisi od metoda neke druge klase buduæi da ih neæe koristiti (ne koristi atrubute neke druge klase i ne poziva funkcije iz neke druge klase).
