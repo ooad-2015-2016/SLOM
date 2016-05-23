@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Zatvor.FormaFinansijskiSavjetnik"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Zatvor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,852,299">
+        <Button x:Name="button" Content="Prikazi zahtjev" HorizontalAlignment="Left" Margin="-2,350,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Broj novih zahtjeva : broj" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="242" Margin="50,88,0,0" VerticalAlignment="Top" Width="315"/>
+        <Button x:Name="button1" Content="Odobri zahtjev" HorizontalAlignment="Left" Margin="145,350,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button2" Content="Odbij zahtjev" HorizontalAlignment="Left" Margin="303,350,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
