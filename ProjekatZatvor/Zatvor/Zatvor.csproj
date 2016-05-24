@@ -145,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forme\FormaUpravnikZatvora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forme\LoginForma.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
