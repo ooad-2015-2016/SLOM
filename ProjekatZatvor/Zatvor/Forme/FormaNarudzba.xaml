@@ -22,7 +22,7 @@
                 </LinearGradientBrush>
             </ListView.BorderBrush>
         </ListView>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="195,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
             <TextBox.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -30,39 +30,39 @@
                 </LinearGradientBrush>
             </TextBox.Foreground>
         </TextBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123" Text="Naziv potrepštine:">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="40,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123" Text="Naziv potrepštine:">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.585"/>
+                    <GradientStop Color="White" Offset="0.321"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,105,0,0" TextWrapping="Wrap" Text="Količina:" VerticalAlignment="Top" Height="32" Width="123">
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="40,138,0,0" TextWrapping="Wrap" Text="Količina:" VerticalAlignment="Top" Height="32" Width="123">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.585"/>
+                    <GradientStop Color="White" Offset="0.321"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="92,159,0,0" BorderBrush="White">
+        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,186,0,0" BorderBrush="White">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.585"/>
+                    <GradientStop Color="White" Offset="0.321"/>
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="120,248,0,0" VerticalAlignment="Top" BorderBrush="White">
+        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="106,249,0,0" VerticalAlignment="Top" BorderBrush="White">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.585"/>
+                    <GradientStop Color="White" Offset="0.321"/>
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="192,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="195,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
             <TextBox.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -70,6 +70,24 @@
                 </LinearGradientBrush>
             </TextBox.Foreground>
         </TextBox>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="40,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.678"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        	<Run Text="D"/>
+        	<Run Text="obrodošao: Ime_i_Prezime"/>
+        </TextBlock>
+        <Button x:Name="button_Copy" Content="Log out" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="679,281,0,0" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.321"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>
