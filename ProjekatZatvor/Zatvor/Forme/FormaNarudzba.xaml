@@ -7,17 +7,69 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="484" Width="792">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.5,0.5">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="-0.076,0.011,23.924,165.011" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
+        </Grid.Background>
         <Grid.RenderTransform>
             <CompositeTransform Rotation="-0.053"/>
         </Grid.RenderTransform>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="263" Margin="359,78,0,0" VerticalAlignment="Top" Width="395" IsSynchronizedWithCurrentItem="False" Header="Lista potrebstina" BorderThickness="1"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,85,0,0" TextWrapping="Wrap" Text="Naziv potrebstine:" VerticalAlignment="Top" Height="32" Width="123"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="192,135,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,135,0,0" TextWrapping="Wrap" Text="Količina:" VerticalAlignment="Top" Height="32" Width="123"/>
-        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="92,189,0,0"/>
-        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="124,308,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="263" Margin="355,18,0,0" VerticalAlignment="Top" Width="395" IsSynchronizedWithCurrentItem="False" Header="Lista potrepština:" BorderThickness="1" Foreground="White">
+            <ListView.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.BorderBrush>
+        </ListView>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="123" Text="Naziv potrepštine:">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="37,105,0,0" TextWrapping="Wrap" Text="Količina:" VerticalAlignment="Top" Height="32" Width="123">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="92,159,0,0" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="120,248,0,0" VerticalAlignment="Top" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="192,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" Background="#FF858585">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.585"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
 
     </Grid>
 </Page>

@@ -8,7 +8,10 @@
     x:Class="Zatvor.PrijemZatvorenika"
     mc:Ignorable="d" Width="Auto" Height="Auto" d:DesignWidth="1268" d:DesignHeight="578">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="20.383,40.935,3.063,34.051" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    <Grid Margin="20.383,40.935,3.063,34.051" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1514*"/>
@@ -19,41 +22,194 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Width="145" Margin="21.082,10,0,0" Grid.Column="1"/>
-        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="35" Margin="166.082,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="35" Margin="18.082,64,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="145" Grid.Column="1"/>
-        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="35" Margin="166.082,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="35" Margin="18.082,119,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top" Width="145" Grid.Column="1"/>
-        <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="35" Margin="166.082,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="35" Margin="18.082,173,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top" Width="145" Grid.Column="1"/>
-        <TextBox x:Name="tBrojTelefona" HorizontalAlignment="Left" Height="35" Margin="166.082,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Width="145" Margin="21.082,10,0,0" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="35" Margin="166.082,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="137" Grid.Column="1" FontSize="18.667">
             <TextBox.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.561"/>
                 </LinearGradientBrush>
             </TextBox.Foreground>
         </TextBox>
-        <DatePicker x:Name="dDatumRodjenja" HorizontalAlignment="Left" Height="35" Margin="166.082,231,0,0" VerticalAlignment="Top" Width="296" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="30" Margin="18.082,233,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="145" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Broj lične karte:" VerticalAlignment="Top" Width="145" Margin="18.082,286,0,0" RenderTransformOrigin="0.566,-0.857" Grid.Column="1"/>
-        <TextBox x:Name="tBrojLicneKarte" HorizontalAlignment="Left" Height="35" Margin="166.082,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1"/>
-        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="36" Margin="227.539,388,0,0" VerticalAlignment="Top" Width="192" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="35" Margin="18.082,64,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="145" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="35" Margin="166.082,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="137" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="35" Margin="18.082,119,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top" Width="145" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="35" Margin="166.082,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="35" Margin="18.082,173,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top" Width="145" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="tBrojTelefona" HorizontalAlignment="Left" Height="35" Margin="166.082,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <DatePicker x:Name="dDatumRodjenja" HorizontalAlignment="Left" Height="35" Margin="166.082,231,0,0" VerticalAlignment="Top" Width="296" Grid.Column="1" FontSize="18.667">
+            <DatePicker.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </DatePicker.Foreground>
+        </DatePicker>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="30" Margin="18.082,233,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="145" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Broj lične karte:" VerticalAlignment="Top" Width="145" Margin="18.082,286,0,0" RenderTransformOrigin="0.566,-0.857" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="tBrojLicneKarte" HorizontalAlignment="Left" Height="35" Margin="166.082,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="296" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="36" Margin="227.539,388,0,0" VerticalAlignment="Top" Width="192" Grid.Column="1" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
         <Image x:Name="iSlika" HorizontalAlignment="Left" Height="89" Margin="325.082,13,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1"/>
-        <RadioButton x:Name="radioButton" Content="Da" HorizontalAlignment="Left" Margin="18.539,411,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <RadioButton x:Name="radioButton1" Content="Ne" HorizontalAlignment="Left" Margin="18.539,442,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.165" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Osuđivan ranije:" VerticalAlignment="Top" Width="145" Margin="21.539,372,0,0" Grid.Column="1"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" Margin="743.082,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="628.082,13,0,0" TextWrapping="Wrap" Text="Dodatni opis:" VerticalAlignment="Top" RenderTransformOrigin="0.787,0.041" Grid.Column="1"/>
-        <Button x:Name="button1" Content="Dodaj krivično djelo" HorizontalAlignment="Left" Height="37" Margin="876.082,388,0,0" VerticalAlignment="Top" Width="176" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="659.082,254,0,0" RenderTransformOrigin="0.566,-0.857" Text="Visina:" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="659.082,315,0,0" RenderTransformOrigin="0.566,-0.857" Grid.Column="1">
+        <RadioButton x:Name="radioButton" Content="Da" HorizontalAlignment="Left" Margin="18.539,411,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="18.667">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <RadioButton x:Name="radioButton1" Content="Ne" HorizontalAlignment="Left" Margin="18.539,442,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.383,0.165" Grid.Column="1" FontSize="18.667">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Osuđivan ranije:" VerticalAlignment="Top" Width="145" Margin="21.539,372,0,0" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" Margin="743.082,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="628.082,13,0,0" TextWrapping="Wrap" Text="Dodatni opis:" VerticalAlignment="Top" RenderTransformOrigin="0.787,0.041" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="button1" Content="Dodaj krivično djelo" HorizontalAlignment="Left" Height="37" Margin="876.082,388,0,0" VerticalAlignment="Top" Width="176" Grid.Column="1" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="659.082,254,0,0" RenderTransformOrigin="0.566,-0.857" Text="Visina:" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="659.082,315,0,0" RenderTransformOrigin="0.566,-0.857" Grid.Column="1" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.439"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
         	<Run Text="Težina:"/>
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" Margin="743.382,254,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1"/>
-        <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="743.382,315,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1"/>
+        <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" Margin="743.382,254,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="743.382,315,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="443" Grid.Column="1" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.561"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
 
     </Grid>
 </Page>

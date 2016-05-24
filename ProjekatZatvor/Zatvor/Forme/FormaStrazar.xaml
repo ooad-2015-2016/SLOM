@@ -7,12 +7,58 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,947,358">
-        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="120,194,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton" Content="Zakljucaj sve celije" HorizontalAlignment="Left" Margin="101,143,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton1" Content="Alarm" HorizontalAlignment="Left" Margin="101,98,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="59,41,0,0" TextWrapping="Wrap" Text="Dobrodošao Ime_i_Prezime" VerticalAlignment="Top" Width="324"/>
-        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="40,280,0,0" VerticalAlignment="Top" Width="236"/>
+    <Grid Margin="0,0,947,358">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
+        </Grid.Background>
+        <Grid.BorderBrush>
+            <ImageBrush ImageSource="C:\Users\Faris\Desktop\SLOM\ProjekatZatvor\Zatvor\Assets\Zatvorenik.jpg"/>
+        </Grid.BorderBrush>
+        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="78,196,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.601"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="0.543"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <RadioButton x:Name="radioButton" Content="Zaključaj sve celije" HorizontalAlignment="Left" Margin="59,145,0,0" VerticalAlignment="Top" FontSize="18.667">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.601"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="0.543"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <RadioButton x:Name="radioButton1" Content="Alarm" HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" FontSize="18.667">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.601"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="0.543"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="59,41,0,0" TextWrapping="Wrap" Text="Dobrodošao Ime_i_Prezime" VerticalAlignment="Top" Width="242" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.601"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="0.543"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="59,270,0,0" VerticalAlignment="Top" Width="236" BorderBrush="#FFFFFEFE" FontSize="18.667">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.601"/>
+                    <GradientStop Color="#FFFAFAFA" Offset="0.543"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>

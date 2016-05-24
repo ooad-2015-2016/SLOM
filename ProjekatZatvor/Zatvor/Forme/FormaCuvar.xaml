@@ -7,16 +7,87 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,663,297">
-        <Button x:Name="button" Content="Azuriraj podatke o zatvoreniku" HorizontalAlignment="Left" Margin="59,118,0,0" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="59,41,0,0" TextWrapping="Wrap" Text="Dobrodošao Ime_i_Prezime" VerticalAlignment="Top" Width="324"/>
-        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="198,346,0,0" VerticalAlignment="Top" Width="236"/>
-        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="426,214,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton" Content="Zakljucaj sve celije" HorizontalAlignment="Left" Margin="407,163,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton1" Content="Alarm" HorizontalAlignment="Left" Margin="407,118,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="269,240,0,0" TextWrapping="Wrap" Text="Broj celije" VerticalAlignment="Top"/>
-        <Button x:Name="button3" Content="Zaključaj/Otklučaj ćeliju" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.646,0.469" Margin="59,240,0,0"/>
-        <Button x:Name="button4" Content="Kreiraj profil zatvorenika" HorizontalAlignment="Left" Margin="59,179,0,0" VerticalAlignment="Top"/>
+    <Grid Margin="0,0,663,297" CacheMode="BitmapCache">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg" Opacity="2"/>
+        </Grid.Background>
+        <Grid.BorderBrush>
+            <ImageBrush Stretch="Uniform" ImageSource="ms-appx:///Assets/SplashScreen.png"/>
+        </Grid.BorderBrush>
+        <Button x:Name="button" Content="Azuriraj podatke o zatvoreniku" HorizontalAlignment="Left" Margin="59,118,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="59,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF0A9BFF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        	<Run Text="Dobrodošao Ime_i_"/>
+        	<Run FontStyle="Italic" Text="Prezime"/>
+        </TextBlock>
+        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="198,329,0,0" VerticalAlignment="Top" Width="236" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="426,214,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <RadioButton x:Name="radioButton" Content="Zaključaj sve ćelije" HorizontalAlignment="Left" Margin="407,163,0,0" VerticalAlignment="Top" FontSize="18.667" FontWeight="Light">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <RadioButton x:Name="radioButton1" Content="Alarm" HorizontalAlignment="Left" Margin="407,118,0,0" VerticalAlignment="Top" FontWeight="Light" FontSize="18.667">
+            <RadioButton.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </RadioButton.Foreground>
+        </RadioButton>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="301,240,0,0" TextWrapping="Wrap" Text="Broj ćelije" VerticalAlignment="Top" AllowDrop="True" FontSize="18.667">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Button x:Name="button3" Content="Zaključaj/Otključaj ćeliju" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.646,0.469" Margin="59,240,0,0" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Button x:Name="button4" Content="Kreiraj profil zatvorenika" HorizontalAlignment="Left" Margin="59,179,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>
