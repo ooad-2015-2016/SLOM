@@ -1,19 +1,16 @@
 ﻿<Page
-    x:Class="Zatvor.FormaStrazar"
+    x:Class="Zatvor.Forme.FormaStrazar1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Zatvor"
+    xmlns:local="using:Zatvor.Forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,0,947,358">
+    <Grid Margin="0,0,933,366">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <Grid.BorderBrush>
-            <ImageBrush ImageSource="C:\Users\Faris\Desktop\SLOM\ProjekatZatvor\Zatvor\Assets\Zatvorenik.jpg"/>
-        </Grid.BorderBrush>
         <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="78,196,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
