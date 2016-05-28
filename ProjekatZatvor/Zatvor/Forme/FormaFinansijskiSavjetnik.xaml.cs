@@ -26,5 +26,15 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

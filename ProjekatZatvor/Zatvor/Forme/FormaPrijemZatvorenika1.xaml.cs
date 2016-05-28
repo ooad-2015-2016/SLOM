@@ -26,5 +26,35 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
+
+        private void button1_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void tIme_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void tIme_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void button1_Copy_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaLogin));
+        }
+
+        private void button2_click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaCuvar1));
+        }
     }
 }

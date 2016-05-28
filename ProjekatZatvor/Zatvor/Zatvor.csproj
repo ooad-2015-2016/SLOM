@@ -119,7 +119,19 @@
     <Compile Include="Forme\FormaZahtjevZaDopust.xaml.cs">
       <DependentUpon>FormaZahtjevZaDopust.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Klase\Celija.cs" />
+    <Compile Include="Klase\FinansijskiSavjetnik.cs" />
+    <Compile Include="Klase\Korisnici.cs" />
+    <Compile Include="Klase\MedicinskiRadnik.cs" />
+    <Compile Include="Klase\Narudzba.cs" />
+    <Compile Include="Klase\ProfilZatvorenika.cs" />
+    <Compile Include="Klase\RadnikUKantini.xaml.cs" />
+    <Compile Include="Klase\SigurnosniMehanizam.cs" />
+    <Compile Include="Klase\Strazar.cs" />
     <Compile Include="Klase\Uposlenik.cs" />
+    <Compile Include="Klase\UpravnikSektora.cs" />
+    <Compile Include="Klase\Zahtjev.cs" />
+    <Compile Include="Klase\ZdravstveniKarton.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

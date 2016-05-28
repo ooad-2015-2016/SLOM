@@ -5,21 +5,14 @@
     xmlns:local="using:Zatvor.Forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="267" Width="572">
 
-    <Grid Margin="0,0,780,525">
+    <Grid Margin="0,0,10,10" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Height="32" Width="88" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594">
-            <TextBlock.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground>
-        </TextBlock>
-        <TextBox x:Name="tUsername" HorizontalAlignment="Left" Margin="112,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="352" FontSize="18.667">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="56,70,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Height="32" Width="88" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594" Foreground="White"/>
+        <TextBox x:Name="tUsername" HorizontalAlignment="Left" Margin="158,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" FontSize="18.667">
             <TextBox.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -27,30 +20,16 @@
                 </LinearGradientBrush>
             </TextBox.Foreground>
         </TextBox>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="32" Width="83" FontSize="18.667" FontWeight="Bold">
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="56,120,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="32" Width="83" FontSize="18.667" FontWeight="Bold" Foreground="#FFFFFEFE"/>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="46" Margin="184,174,0,0" VerticalAlignment="Top" Width="208" RenderTransformOrigin="0.517,0.414" FontSize="18.667" Background="#33060101" BorderBrush="White" Click="button_Click" Foreground="White"/>
+        <PasswordBox x:Name="tPassword" HorizontalAlignment="Left" Height="39" Margin="158,112,0,0" VerticalAlignment="Top" Width="352" FontSize="18.667"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="56,19,0,0" TextWrapping="Wrap" Text="Pogresan unos!" VerticalAlignment="Top" Height="32" Width="162" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594" RequestedTheme="Light" Visibility="Collapsed">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFF90000"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tPassword" HorizontalAlignment="Left" Margin="112,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="352" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="46" Margin="138,117,0,0" VerticalAlignment="Top" Width="208" RenderTransformOrigin="0.517,0.414" FontSize="18.667" Background="#33060101" BorderBrush="White" Click="button_Click">
-            <Button.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
-
     </Grid>
 </Page>

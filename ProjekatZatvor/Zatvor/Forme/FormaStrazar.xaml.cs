@@ -26,5 +26,10 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaLogin));
+        }
     }
 }

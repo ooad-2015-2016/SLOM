@@ -27,14 +27,20 @@ namespace Zatvor.Forme
             this.InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1));
+        }
 
+        private void button1_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaLogin));
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1));
         }
     }
 }

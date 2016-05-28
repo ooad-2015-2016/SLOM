@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zatvor.Klase
+namespace Zatvor_pokusaj2.Klase
 {
-    public abstract class Uposlenik
+   public abstract class Uposlenik
     {
         private string ime;
         private string prezime;
         private DateTime datumRodjenja;
-        private string brojLicneKarte;
-        private int jmbg;
+        private int jMBG;
         private string adresaStanovanja;
-        private string funkcijaUposlenik;
+        private string funkcijaUposlenika;
 
-        public string Ime
+         public string Ime
         {
             get
             {
@@ -55,29 +54,16 @@ namespace Zatvor.Klase
             }
         }
 
-        public string BrojLicneKarte
+        public int JMBG
         {
             get
             {
-                return brojLicneKarte;
+                return jMBG;
             }
 
             set
             {
-                brojLicneKarte = value;
-            }
-        }
-
-        public int Jmbg
-        {
-            get
-            {
-                return jmbg;
-            }
-
-            set
-            {
-                jmbg = value;
+                jMBG = value;
             }
         }
 
@@ -94,28 +80,17 @@ namespace Zatvor.Klase
             }
         }
 
-        public string FunkcijaUposlenik
+        public string FunkcijaUposlenika
         {
             get
             {
-                return funkcijaUposlenik;
+                return funkcijaUposlenika;
             }
 
             set
             {
-                funkcijaUposlenik = value;
+                funkcijaUposlenika = value;
             }
-        }
-
-        public Uposlenik(string ime, string prezime, DateTime datumRodjenja, string brojLicneKarte, int jmbg, string adresaStanovanja, string funkcijaUposlenik)
-        {
-            this.Ime = ime;
-            this.Prezime = prezime;
-            this.DatumRodjenja = datumRodjenja;
-            this.BrojLicneKarte = brojLicneKarte;
-            this.Jmbg = jmbg;
-            this.AdresaStanovanja = adresaStanovanja;
-            this.FunkcijaUposlenik = funkcijaUposlenik;
         }
     }
 }
