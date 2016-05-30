@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class SigurnosniMehanizam
+    public class SigurnosniMehanizam
     {
         private DateTime vrijemeAktivacije;
         private string razlogAktivacije;

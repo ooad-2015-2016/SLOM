@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class Narudzba
+    public class Narudzba
     {
         private string imeArtikla;
         private double kolicinaArtikla;
         private int idNarudzbe;
         private bool statusNarudzbe;
+        public static int brojac = 0;
 
         public string ImeArtikla
         {
@@ -65,16 +66,12 @@ namespace Zatvor_pokusaj2.Klase
             }
         }
 
-        public Narudzba(string imeArtikla, double kolicinaArtikla, int idNarudzbe, bool statusNarudzbe)
+        public Narudzba(string imeArtikla, double kolicinaArtikla, bool statusNarudzbe)
         {
             this.ImeArtikla = imeArtikla;
             this.KolicinaArtikla = kolicinaArtikla;
-            this.IdNarudzbe = idNarudzbe;
+            this.IdNarudzbe = System.Threading.Interlocked.Increment(ref brojac);
             this.StatusNarudzbe = statusNarudzbe;
-        }
-        public void kreirajNarudzbu(string imeArtikla, double kolicinaArtikla, int idNarudzbe)
-        {
-
         }
     }
 }

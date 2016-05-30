@@ -26,5 +26,18 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            textBox.Text = "";
+            textBox1.Text = "";
+            pocetak.Date = DateTime.Today;
+            kraj.Date = DateTime.Today;
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaCuvar1));
+        }
     }
 }

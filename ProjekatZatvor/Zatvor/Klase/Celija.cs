@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class Celija
+   public class Celija
     {
         private int brojCelije;
         private bool statusCelije; //True slobodna, False zauzeta

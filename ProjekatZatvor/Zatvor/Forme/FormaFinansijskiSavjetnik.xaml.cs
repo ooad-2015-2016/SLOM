@@ -36,5 +36,10 @@ namespace Zatvor.Forme
         {
 
         }
+
+        private void button1_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FormaLogin));
+        }
     }
 }

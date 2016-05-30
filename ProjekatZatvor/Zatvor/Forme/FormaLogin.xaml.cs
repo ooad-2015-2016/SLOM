@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Zatvor.Klase;
 using Zatvor.Forme;
+using Zatvor_pokusaj2.Klase;
+using Zatvor.ViewModel;
+using Zatvor.DataSource;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,29 +34,38 @@ namespace Zatvor.Forme
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            List<Korisnici> korisnici = new List<Korisnici>();
-            Korisnici k1 = new Korisnici("Cuvar", "Cuvar123");
-            Korisnici k2 = new Korisnici("Strazar", "Cuvar123");
-            korisnici.Add(k1); korisnici.Add(k2);
+            List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
+            
             Korisnici uneseno = new Korisnici(tUsername.Text, tPassword.Password);
-            foreach (Korisnici k in korisnici)
+            
+            foreach (Uposlenik u in uposlenici)
             {
-                if (k.Username.Equals(uneseno.Username) && k.Password.Equals(uneseno.Password))
+                if (u.Login_podaci.Username.Equals(uneseno.Username) && u.Login_podaci.Password.Equals(uneseno.Password))
                 {
                     textBlock_Copy1.Visibility = Visibility.Collapsed;
-                    List<string> stvarcice = new List<string>();
-                    stvarcice.Add(tUsername.Text);
-                    stvarcice.Add(tPassword.Password);
-                    if (k.Username.Equals("Strazar"))
+                    List<string> prijava = new List<string>();
+                    prijava.Add(tUsername.Text);
+                    prijava.Add(tPassword.Password);
+                    if (u.FunkcijaUposlenika.Equals("Strazar"))
                     {
-                        this.Frame.Navigate(typeof(FormaStrazar1));
+                        this.Frame.Navigate(typeof(FormaStrazar1), prijava);
                     }
-                    else if (k.Username.Equals("Cuvar"))
+                    else if (u.FunkcijaUposlenika.Equals("Cuvar"))
                     {
-                        this.Frame.Navigate(typeof(FormaCuvar1), stvarcice);
+                        this.Frame.Navigate(typeof(FormaCuvar1), prijava);
                     }
-
-
+                    else if (u.FunkcijaUposlenika.Equals("Upravnik"))
+                    {
+                        this.Frame.Navigate(typeof(FormaUpravnikZatvora1), prijava);
+                    }
+                    else if (u.FunkcijaUposlenika.Equals("RadnikUKantini"))
+                    {
+                        this.Frame.Navigate(typeof(FormaRadnikUKantini), prijava);
+                    }
+                    else if (u.FunkcijaUposlenika.Equals("Medicinski Radnik"))
+                    {
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), prijava);
+                    }
                     break;
                 }
             }
@@ -61,5 +73,6 @@ namespace Zatvor.Forme
             tUsername.Text = "";
             tPassword.Password = "";
         }
-    }
+
+        }
 }

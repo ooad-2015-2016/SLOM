@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class ZdravstveniKarton
+   public class ZdravstveniKarton
     {
         private string brojKartona;
         private string dijagnoza;

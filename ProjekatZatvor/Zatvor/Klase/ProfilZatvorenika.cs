@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class ProfilZatvorenika
+   public class ProfilZatvorenika
     {
         private string ime;
         private bool osudjivanRanije;
@@ -15,10 +15,27 @@ namespace Zatvor_pokusaj2.Klase
         private double visina;
         private double tezina;
         private string adresaStanovanja;
+        private string brojLicneKarte;
+        private string dodatniOpis;
+        private string brojTelefona;
         private int idZatvorenika;
-        private int duzinaTrajanjaKazne;
         private char tezinaPrekrsaja;
         private Celija celija;
+        private int duzinaTrajanjaKazne;
+
+        public ProfilZatvorenika(string ime, string prezime, string adresaStanovanja, string brojtelefona, DateTime datumRodjenja, string brojLicneKarte, string dodatniOpis, double visina, double tezina, bool osudjivanRanije)
+        {
+            this.ime = ime;
+            this.osudjivanRanije = osudjivanRanije;
+            this.prezime = prezime;
+            this.datumRodjenja = datumRodjenja;
+            this.visina = visina;
+            this.tezina = tezina;
+            this.adresaStanovanja = adresaStanovanja;
+            this.brojLicneKarte = brojLicneKarte;
+            this.dodatniOpis = dodatniOpis;
+            this.brojTelefona = brojtelefona;
+        }
 
         public string Ime
         {
@@ -162,6 +179,46 @@ namespace Zatvor_pokusaj2.Klase
                 celija = value;
             }
         }
+
+        public string BrojLicneKarte
+        {
+            get
+            {
+                return brojLicneKarte;
+            }
+
+            set
+            {
+                brojLicneKarte = value;
+            }
+        }
+
+        public string DodatniOpis
+        {
+            get
+            {
+                return dodatniOpis;
+            }
+
+            set
+            {
+                dodatniOpis = value;
+            }
+        }
+
+        public string BrojTelefona
+        {
+            get
+            {
+                return brojTelefona;
+            }
+
+            set
+            {
+                brojTelefona = value;
+            }
+        }
+
         public void AzurirajPodatke(ProfilZatvorenika pz)
         {
 

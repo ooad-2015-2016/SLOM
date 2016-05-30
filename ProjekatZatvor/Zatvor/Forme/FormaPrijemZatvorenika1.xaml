@@ -22,14 +22,7 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="35" Margin="168.543,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18.667" TextChanged="tIme_TextChanged_1">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="35" Margin="168.543,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18.667" TextChanged="tIme_TextChanged_1" Foreground="Black" BorderBrush="{x:Null}"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="35" Margin="20.543,64,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="145" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -38,14 +31,7 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="35" Margin="168.543,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="35" Margin="168.543,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" FontSize="18.667" Foreground="Black" BorderBrush="{x:Null}"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="35" Margin="20.543,119,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top" Width="145" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -54,14 +40,7 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="35" Margin="168.543,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="35" Margin="168.543,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667" Foreground="Black" BorderBrush="{x:Null}"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="35" Margin="20.543,173,0,0" TextWrapping="Wrap" Text="Broj telefona:" VerticalAlignment="Top" Width="145" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -70,22 +49,8 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tBrojTelefona" HorizontalAlignment="Left" Height="35" Margin="168.543,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
-        <DatePicker x:Name="dDatumRodjenja" HorizontalAlignment="Left" Height="35" Margin="168.543,231,0,0" VerticalAlignment="Top" Width="296" FontSize="18.667">
-            <DatePicker.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White"/>
-                </LinearGradientBrush>
-            </DatePicker.Foreground>
-        </DatePicker>
+        <TextBox x:Name="tBrojTelefona" HorizontalAlignment="Left" Height="35" Margin="168.543,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667" Foreground="Black" BorderBrush="{x:Null}"/>
+        <DatePicker x:Name="dDatumRodjenja" HorizontalAlignment="Left" Height="35" Margin="168.543,231,0,0" VerticalAlignment="Top" Width="296" FontSize="18.667" Foreground="Black"/>
         <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="30" Margin="20.543,233,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="145" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -102,15 +67,8 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="tBrojLicneKarte" HorizontalAlignment="Left" Height="35" Margin="168.543,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
-        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="36" Margin="230,388,0,0" VerticalAlignment="Top" Width="192" FontSize="18.667" BorderBrush="White">
+        <TextBox x:Name="tBrojLicneKarte" HorizontalAlignment="Left" Height="35" Margin="168.543,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667" Foreground="Black" BorderBrush="{x:Null}"/>
+        <Button x:Name="button" Content="Dodaj zatvorenika" HorizontalAlignment="Left" Height="44" Margin="271,449,0,0" VerticalAlignment="Top" Width="192" FontSize="18.667" BorderBrush="White" Click="button_Click">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -143,14 +101,7 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" Margin="745.543,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667" TextChanged="textBox_TextChanged">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" Margin="745.543,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667" TextChanged="textBox_TextChanged" BorderBrush="{x:Null}" Foreground="Black"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="630.543,13,0,0" TextWrapping="Wrap" Text="Dodatni opis:" VerticalAlignment="Top" RenderTransformOrigin="0.787,0.041" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -159,14 +110,6 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button x:Name="button1" Content="Dodaj krivično djelo" HorizontalAlignment="Left" Height="37" Margin="879,388,0,0" VerticalAlignment="Top" Width="204" FontSize="18.667" BorderBrush="White">
-            <Button.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White"/>
-                </LinearGradientBrush>
-            </Button.Foreground>
-        </Button>
         <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Margin="661.543,254,0,0" RenderTransformOrigin="0.566,-0.857" Text="Visina:" FontSize="18.667">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -186,22 +129,8 @@
     		<LineBreak/>
     		<Run/>
         </TextBlock>
-        <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" Margin="745.843,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
-        <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="745.843,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667">
-            <TextBox.Foreground>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.561"/>
-                </LinearGradientBrush>
-            </TextBox.Foreground>
-        </TextBox>
+        <TextBox x:Name="tVisina" HorizontalAlignment="Left" Height="35" Margin="745.843,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667" BorderBrush="{x:Null}" Foreground="Black"/>
+        <TextBox x:Name="tTezina" HorizontalAlignment="Left" Height="35" Margin="745.843,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="443" FontSize="18.667" BorderBrush="{x:Null}" Foreground="Black"/>
         <Button x:Name="button1_Copy" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="999,449,0,0" VerticalAlignment="Top" Width="236" FontSize="18.667" BorderBrush="White" Click="button1_Copy_Click_1">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -212,6 +141,6 @@
             </Button.Foreground>
         </Button>
         <Button x:Name="button2" Content="Nazad" FontSize="18.667" HorizontalAlignment="Left" Margin="778,449,0,0" VerticalAlignment="Top" Height="44" Width="183" Background="#33000000" BorderBrush="White" Foreground="#FFFFF9F9" Click="button2_click"/>
-
+        <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left" Margin="631,448,0,0" VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="45" Width="117"/>
     </Grid>
 </Page>

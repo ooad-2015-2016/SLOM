@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="Zatvor.Forme.FormaDodajUposlenika"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Zatvor.Forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="628" Height="616">
+
+    <Grid>
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout/>
+        </FlyoutBase.AttachedFlyout>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Ime:" VerticalAlignment="Top" Width="145" Margin="75,87,0,0" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="35" Margin="75,141,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="145" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="35" Margin="75,196,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top" Width="145" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="35" Margin="75,250,0,0" TextWrapping="Wrap" Text="JMBG:" VerticalAlignment="Top" Width="145" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="30" Margin="75,310,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="145" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="37" Margin="303,371,0,0" VerticalAlignment="Top" Width="296">
+            <x:String>Cuvar</x:String>
+            <x:String>Medicinski radnik</x:String>
+            <x:String>Radnik u kantini</x:String>
+            <x:String>Strazar</x:String>
+            <x:String>Finansijski savjetnik</x:String>
+        </ComboBox>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Funkcija:" VerticalAlignment="Top" Width="145" Margin="75,371,0,0" RenderTransformOrigin="0.566,-0.857" FontSize="18.667">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="button" Content="Log out" HorizontalAlignment="Left" Height="47" Margin="411,548,0,0" VerticalAlignment="Top" Width="188" Click="button_Click" BorderBrush="White" Foreground="White" FontSize="18.667"/>
+        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="39" Margin="301,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
+        <TextBox x:Name="tJMBG" HorizontalAlignment="Left" Height="39" Margin="301,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
+        <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="39" Margin="301,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
+        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="39" Margin="301,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
+        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Kreiranje profila novog uposlenika" VerticalAlignment="Top" Width="430" Margin="75,24,0,0" FontSize="21.333" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="button1" Content="Dodaj uposlenika" HorizontalAlignment="Left" Height="47" Margin="411,496,0,0" VerticalAlignment="Top" Width="188" Click="button1_Click" Foreground="White" BorderBrush="White" FontSize="18.667"/>
+        <DatePicker x:Name="tDatumRodjenja" HorizontalAlignment="Left" Height="46" Margin="303,308,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="button2" Content="Reset" HorizontalAlignment="Left" Height="47" Margin="411,444,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button2_Click"/>
+        <Button x:Name="button2_Copy" Content="Nazad" HorizontalAlignment="Left" Height="47" Margin="32,548,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button2_Copy_Click"/>
+
+    </Grid>
+</Page>

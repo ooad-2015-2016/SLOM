@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zatvor.Klase;
 
 namespace Zatvor_pokusaj2.Klase
 {
@@ -11,11 +12,11 @@ namespace Zatvor_pokusaj2.Klase
         private string ime;
         private string prezime;
         private DateTime datumRodjenja;
-        private int jMBG;
+        private string jMBG;
         private string adresaStanovanja;
         private string funkcijaUposlenika;
-
-         public string Ime
+        private Korisnik login_podaci;
+        public string Ime
         {
             get
             {
@@ -54,7 +55,7 @@ namespace Zatvor_pokusaj2.Klase
             }
         }
 
-        public int JMBG
+        public string JMBG
         {
             get
             {
@@ -91,6 +92,23 @@ namespace Zatvor_pokusaj2.Klase
             {
                 funkcijaUposlenika = value;
             }
+        }
+
+        internal Korisnik Login_podaci
+        {
+            get
+            {
+                return login_podaci;
+            }
+
+            set
+            {
+                login_podaci = value;
+            }
+        }
+        public override string ToString()
+        {
+            return Ime + " " + Prezime + " " + FunkcijaUposlenika;
         }
     }
 }

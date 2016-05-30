@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Zatvor.Klase;
+using Zatvor_pokusaj2.Klase;
 
 namespace Zatvor_pokusaj2.Klase
 {
-    class Strazar: Uposlenik
+    public class Strazar: Uposlenik
     {
-        private string trenutniSektor;
-
-        public string TrenutniSektor
+        public Strazar(string ime, string prezime, DateTime datumRodjenja, string jMBG, string adresaStanovanja, string funkcijaUposlenika, Korisnik login_podaci)
         {
-            get
-            {
-                return trenutniSektor;
-            }
-
-            set
-            {
-                trenutniSektor = value;
-            }
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.DatumRodjenja = datumRodjenja;
+            this.JMBG = jMBG;
+            this.AdresaStanovanja = adresaStanovanja;
+            this.FunkcijaUposlenika = funkcijaUposlenika;
+            this.Login_podaci = login_podaci;
         }
+
     }
 }

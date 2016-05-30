@@ -95,20 +95,33 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataSource\DataSource.cs" />
     <Compile Include="Forme\FormaCuvar.xaml.cs">
       <DependentUpon>FormaCuvar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormaDodajUposlenika.xaml.cs">
+      <DependentUpon>FormaDodajUposlenika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormaFinansijskiSavjetnik.xaml.cs">
       <DependentUpon>FormaFinansijskiSavjetnik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormaLista.xaml.cs">
+      <DependentUpon>FormaLista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormaLogin.xaml.cs">
       <DependentUpon>FormaLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormaMedicinskiRadnik.xaml.cs">
+      <DependentUpon>FormaMedicinskiRadnik.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormaNarudzba.xaml.cs">
       <DependentUpon>FormaNarudzba.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormaPrijemZatvorenika1.xaml.cs">
       <DependentUpon>FormaPrijemZatvorenika1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormaRadnikUKantini.xaml.cs">
+      <DependentUpon>FormaRadnikUKantini.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormaStrazar.xaml.cs">
       <DependentUpon>FormaStrazar.xaml</DependentUpon>
@@ -119,23 +132,34 @@
     <Compile Include="Forme\FormaZahtjevZaDopust.xaml.cs">
       <DependentUpon>FormaZahtjevZaDopust.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormaZdravstveniKarton.xaml.cs">
+      <DependentUpon>FormaZdravstveniKarton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Celija.cs" />
+    <Compile Include="Klase\Cuvar.cs" />
     <Compile Include="Klase\FinansijskiSavjetnik.cs" />
+    <Compile Include="Klase\Kontejner.cs" />
     <Compile Include="Klase\Korisnici.cs" />
+    <Compile Include="Klase\Korisnik.cs" />
     <Compile Include="Klase\MedicinskiRadnik.cs" />
     <Compile Include="Klase\Narudzba.cs" />
     <Compile Include="Klase\ProfilZatvorenika.cs" />
-    <Compile Include="Klase\RadnikUKantini.xaml.cs" />
+    <Compile Include="Klase\RadnikUKantini.cs" />
     <Compile Include="Klase\SigurnosniMehanizam.cs" />
     <Compile Include="Klase\Strazar.cs" />
     <Compile Include="Klase\Uposlenik.cs" />
-    <Compile Include="Klase\UpravnikSektora.cs" />
+    <Compile Include="Klase\Upravnik.cs" />
     <Compile Include="Klase\Zahtjev.cs" />
     <Compile Include="Klase\ZdravstveniKarton.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\KontejnerViewModel.cs" />
+    <Compile Include="ViewModel\KorisnikViewModel.cs" />
+    <Compile Include="ViewModel\NarudzbaViewModel.cs" />
+    <Compile Include="ViewModel\PrijemZatvorenikaViewModel.cs" />
+    <Compile Include="ViewModel\UposlenikViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\2 slika.jpg" />
+    <Content Include="Assets\ALARM.mp3" />
     <Content Include="Assets\busted_background_by_ndrewblack-d4e2rhh.png" />
     <Content Include="Assets\Crveno.png" />
     <Content Include="Assets\Zatvorenik.png" />
@@ -165,11 +190,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forme\FormaDodajUposlenika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forme\FormaFinansijskiSavjetnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forme\FormaLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forme\FormaLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\FormaMedicinskiRadnik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forme\FormaPrijemZatvorenika1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\FormaRadnikUKantini.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,6 +231,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forme\FormaZahtjevZaDopust.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\FormaZdravstveniKarton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
