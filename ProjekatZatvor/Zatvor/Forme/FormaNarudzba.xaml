@@ -22,7 +22,7 @@
         <TextBox x:Name="tNaziv" HorizontalAlignment="Left" Margin="206,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Background="#FF858585" TextChanged="tNaziv_TextChanged" FontSize="18.667" BorderBrush="{x:Null}" Foreground="Black"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="40,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="150" Text="Naziv potrepštine:" Foreground="White" FontSize="18.667"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="40,143,0,0" TextWrapping="Wrap" Text="Količina:" VerticalAlignment="Top" Height="32" Width="123" Foreground="White" FontSize="18.667"/>
-        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206,198,0,0" BorderBrush="White" Click="button_Click" Background="{x:Null}" FontSize="18.667" Width="155">
+        <Button x:Name="button" Content="Dodaj na listu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="208,198,0,0" BorderBrush="White" Click="button_Click" Background="{x:Null}" FontSize="18.667" Width="155">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -30,7 +30,7 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="205,255,0,0" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" FontSize="18.667" Width="156" Click="button1_Click">
+        <Button x:Name="button1" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="672,309,0,0" VerticalAlignment="Top" BorderBrush="White" Background="{x:Null}" FontSize="18.667" Width="156" Click="button1_Click">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -40,7 +40,7 @@
         </Button>
         <TextBox x:Name="tKolicina" HorizontalAlignment="Left" Margin="206,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155" Background="#FF858585" FontSize="18.667" Foreground="Black" BorderBrush="{x:Null}"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="40,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Foreground="White" Text="Narudžba" FontSize="21.333" FontWeight="Bold"/>
-        <Button x:Name="button_Copy" Content="Nazad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="691,309,0,0" BorderBrush="White" Click="button_Copy_Click" Width="130" FontSize="18.667">
+        <Button x:Name="button_Copy" Content="Nazad" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,309,0,0" BorderBrush="White" Click="button_Copy_Click" Width="130" FontSize="18.667">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -48,8 +48,8 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-        <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="119" Margin="548,309,0,0"/>
-        <Button x:Name="button3_Copy" Content="Delete" FontSize="18.667" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="button3_Copy_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="119" Margin="399,309,0,0"/>
+        <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="69" Margin="23,198,0,0"/>
+        <Button x:Name="button3_Copy" Content="Delete" FontSize="18.667" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="button3_Copy_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="81" Margin="109,198,0,0"/>
         <TextBlock x:Name="testniHepek" HorizontalAlignment="Left" Height="37" Margin="23,198,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="100" Visibility="Collapsed"/>
 
 

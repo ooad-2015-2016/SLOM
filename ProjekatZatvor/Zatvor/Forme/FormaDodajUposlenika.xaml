@@ -69,7 +69,6 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button x:Name="button" Content="Log out" HorizontalAlignment="Left" Height="47" Margin="411,548,0,0" VerticalAlignment="Top" Width="188" Click="button_Click" BorderBrush="White" Foreground="White" FontSize="18.667"/>
         <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="39" Margin="301,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
         <TextBox x:Name="tJMBG" HorizontalAlignment="Left" Height="39" Margin="301,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
         <TextBox x:Name="tAdresa" HorizontalAlignment="Left" Height="39" Margin="301,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667"/>
@@ -82,9 +81,9 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button x:Name="button1" Content="Dodaj uposlenika" HorizontalAlignment="Left" Height="47" Margin="411,496,0,0" VerticalAlignment="Top" Width="188" Click="button1_Click" Foreground="White" BorderBrush="White" FontSize="18.667"/>
+        <Button x:Name="button1" Content="Dodaj uposlenika" HorizontalAlignment="Left" Height="47" Margin="411,548,0,0" VerticalAlignment="Top" Width="188" Click="button1_Click" Foreground="White" BorderBrush="White" FontSize="18.667"/>
         <DatePicker x:Name="tDatumRodjenja" HorizontalAlignment="Left" Height="46" Margin="303,308,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button x:Name="button2" Content="Reset" HorizontalAlignment="Left" Height="47" Margin="411,444,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button2_Click"/>
+        <Button x:Name="button2" Content="Reset" HorizontalAlignment="Left" Height="47" Margin="32,460,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button2_Click"/>
         <Button x:Name="button2_Copy" Content="Nazad" HorizontalAlignment="Left" Height="47" Margin="32,548,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button2_Copy_Click"/>
 
     </Grid>

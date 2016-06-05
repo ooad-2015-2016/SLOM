@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataSource\DataSource.cs" />
+    <Compile Include="Klase\Alarm.cs" />
     <Compile Include="Forme\FormaCuvar.xaml.cs">
       <DependentUpon>FormaCuvar.xaml</DependentUpon>
     </Compile>
@@ -107,6 +108,9 @@
     </Compile>
     <Compile Include="Forme\FormaLista.xaml.cs">
       <DependentUpon>FormaLista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FormaListaZatvorenika.xaml.cs">
+      <DependentUpon>FormaListaZatvorenika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forme\FormaLogin.xaml.cs">
       <DependentUpon>FormaLogin.xaml</DependentUpon>
@@ -155,11 +159,14 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\CuvarViewModel.cs" />
     <Compile Include="ViewModel\KontejnerViewModel.cs" />
     <Compile Include="ViewModel\KorisnikViewModel.cs" />
     <Compile Include="ViewModel\NarudzbaViewModel.cs" />
     <Compile Include="ViewModel\PrijemZatvorenikaViewModel.cs" />
+    <Compile Include="ViewModel\ProfilZatvorenikaViewModel.cs" />
     <Compile Include="ViewModel\UposlenikViewModel.cs" />
+    <Compile Include="ViewModel\ZdravstveniKartonViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -169,6 +176,11 @@
   <ItemGroup>
     <Content Include="Assets\2 slika.jpg" />
     <Content Include="Assets\ALARM.mp3" />
+    <Content Include="Assets\busted.scale-100.png" />
+    <Content Include="Assets\busted.scale-125.png" />
+    <Content Include="Assets\busted.scale-150.png" />
+    <Content Include="Assets\busted.scale-200.png" />
+    <Content Include="Assets\busted.scale-400.png" />
     <Content Include="Assets\busted_background_by_ndrewblack-d4e2rhh.png" />
     <Content Include="Assets\Crveno.png" />
     <Content Include="Assets\Zatvorenik.png" />
@@ -199,6 +211,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forme\FormaLista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forme\FormaListaZatvorenika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

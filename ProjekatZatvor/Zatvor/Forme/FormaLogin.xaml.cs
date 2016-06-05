@@ -17,6 +17,7 @@ using Zatvor.Forme;
 using Zatvor_pokusaj2.Klase;
 using Zatvor.ViewModel;
 using Zatvor.DataSource;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,7 +37,7 @@ namespace Zatvor.Forme
         {
             List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             
-            Korisnici uneseno = new Korisnici(tUsername.Text, tPassword.Password);
+            Korisnik uneseno = new Korisnik(tUsername.Text, tPassword.Password);
             
             foreach (Uposlenik u in uposlenici)
             {
@@ -44,8 +45,8 @@ namespace Zatvor.Forme
                 {
                     textBlock_Copy1.Visibility = Visibility.Collapsed;
                     List<string> prijava = new List<string>();
-                    prijava.Add(tUsername.Text);
-                    prijava.Add(tPassword.Password);
+                    prijava.Add(uneseno.Username);
+                    prijava.Add(uneseno.Password);
                     if (u.FunkcijaUposlenika.Equals("Strazar"))
                     {
                         this.Frame.Navigate(typeof(FormaStrazar1), prijava);
@@ -58,13 +59,17 @@ namespace Zatvor.Forme
                     {
                         this.Frame.Navigate(typeof(FormaUpravnikZatvora1), prijava);
                     }
-                    else if (u.FunkcijaUposlenika.Equals("RadnikUKantini"))
+                    else if (u.FunkcijaUposlenika.Equals("Radnik u kantini"))
                     {
                         this.Frame.Navigate(typeof(FormaRadnikUKantini), prijava);
                     }
-                    else if (u.FunkcijaUposlenika.Equals("Medicinski Radnik"))
+                    else if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
                     {
                         this.Frame.Navigate(typeof(FormaMedicinskiRadnik), prijava);
+                    }
+                    else if (u.FunkcijaUposlenika.Equals("Finansijski savjetnik"))
+                    {
+                        this.Frame.Navigate(typeof(FormaFinansijskiSavjetnik1), prijava);
                     }
                     break;
                 }
@@ -74,5 +79,10 @@ namespace Zatvor.Forme
             tPassword.Password = "";
         }
 
+        private async void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageDialog dialog = new MessageDialog("Pri pokretanju aplikacije prvi prozor koji se otvora je 'Login'. Kako bi svaki korisnik imao određene privilegije potrebno je unijeti 'Username' i 'Password', koji su case-sensitive, te kliknuti na 'Login'.\nUkoliko uneseni podaci nisu ispravni aplikacija će javiti poruku o neispravnom unosu. \nUkoliko ste zaboravili korisničke podatke javite se administratoru (upravniku) koji će vam ih dati/kreirati.", "Help");
+            await dialog.ShowAsync();
         }
+    }
 }

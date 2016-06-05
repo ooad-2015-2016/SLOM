@@ -19,19 +19,17 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <Button x:Name="button" Content="Kreiraj zdravstveni karton" HorizontalAlignment="Left" Height="45" Margin="359,204,0,0" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="White" FontSize="18.667" Grid.Row="1" RenderTransformOrigin="0.531,0.089" Click="button_Click" Grid.Column="1"/>
-        <Button x:Name="button1" Content="Otvori zdravstveni karton" HorizontalAlignment="Left" Height="44" Margin="359,131,0,0" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="White" Click="button1_Click" FontSize="18.667" Grid.Row="1" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="52,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333" Grid.Row="1" Foreground="White" Grid.Column="1">
+        <Button x:Name="button" Content="Kreiraj zdravstveni karton" HorizontalAlignment="Left" Height="45" Margin="359,281,0,0" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="White" FontSize="18.667" Grid.Row="1" RenderTransformOrigin="0.531,0.089" Click="button_Click" Grid.Column="1"/>
+        <Button x:Name="button1" Content="Otvori zdravstveni karton" HorizontalAlignment="Left" Height="44" Margin="359,200,0,0" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="White" Click="button1_Click" FontSize="18.667" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="52,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" IsColorFontEnabled="False" FontSize="21.333" Grid.Row="1" Foreground="White" Grid.Column="1" FontWeight="Bold">
         	<Run Text="Dobrodošao Ime_i_"/>
         	<Run FontStyle="Italic" Text="Prezime"/>
         </TextBlock>
-        <Button x:Name="button2" Content="Log out" HorizontalAlignment="Left" Height="42" Margin="359,346,0,0" Grid.Row="1" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="White" Click="button2_Click" FontSize="18.667" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="36" Margin="52,139,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Foreground="White" FontSize="18.667" Grid.Column="1">
-        	<Run Text="Broj kartona"/>
-        	<Run Text=":"/>
-        </TextBlock>
-        <TextBox x:Name="tBrKartona" HorizontalAlignment="Left" Height="44" Margin="170,129,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" BorderBrush="{x:Null}" Foreground="Black" FontSize="18.667" Grid.Column="1"/>
-        <Button x:Name="button3" Content="Kreiraj narudžbu" HorizontalAlignment="Left" Height="40" Margin="359,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="256" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button3_Click" Grid.Column="1"/>
-
+        <Button x:Name="button2" Content="Log out" HorizontalAlignment="Left" Height="42" Margin="550,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="87" Foreground="White" BorderBrush="White" Click="button2_Click" FontSize="18.667" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="36" Margin="52,159,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Foreground="White" FontSize="18.667" Grid.Column="1" Text="Zatvorenik:"/>
+        <Button x:Name="button3" Content="Kreiraj narudžbu" HorizontalAlignment="Left" Height="40" Margin="359,366,0,0" Grid.Row="1" VerticalAlignment="Top" Width="256" BorderBrush="White" Foreground="White" FontSize="18.667" Click="button3_Click" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="36" Margin="52,249,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="110" Visibility="Collapsed"/>
+        <Button x:Name="button1_Copy1" Content="?" HorizontalAlignment="Left" Height="43" Margin="500,0,0,0" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Copy1_Click" RenderTransformOrigin="2.044,0.412" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <ComboBox x:Name="comboBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="52,200,0,0" Grid.Row="1" VerticalAlignment="Top" Width="239" Height="40"/>
     </Grid>
 </Page>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,8 +13,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Zatvor.DataSource;
 using Zatvor.Forme;
 using Zatvor.Klase;
+using Zatvor.ViewModel;
 using Zatvor_pokusaj2.Klase;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -46,6 +49,16 @@ namespace Zatvor.Forme
             foreach (Uposlenik u in (List<Uposlenik>)e.Parameter)
                 listView.Items.Add(u);
             base.OnNavigatedTo(e);
+        }
+
+        private async void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Uposlenik pz = (Uposlenik)listView.SelectedItem;
+            UposlenikViewModel uwm = new UposlenikViewModel();
+            uwm.ObrisiUposlenika(pz);
+            listView.Items.Remove(listView.SelectedItem);
+            MessageDialog dialog = new MessageDialog("Uposlenik obrisan", "Obavještenje");
+            await dialog.ShowAsync();
         }
     }
 }

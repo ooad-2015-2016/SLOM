@@ -12,6 +12,7 @@ namespace Zatvor.Klase
     public class Upravnik : Uposlenik
 
     {
+        private List<Zahtjev> zahtjevi = new List<Zahtjev>();
         public Upravnik(string ime, string prezime, DateTime datumRodjenja, string jMBG, string adresaStanovanja, string funkcijaUposlenika, Korisnik login_podaci)
         {
             this.Ime = ime;
@@ -21,6 +22,19 @@ namespace Zatvor.Klase
             this.AdresaStanovanja = adresaStanovanja;
             this.FunkcijaUposlenika = funkcijaUposlenika;
             this.Login_podaci = login_podaci;
+        }
+
+        public List<Zahtjev> Zahtjevi
+        {
+            get
+            {
+                return zahtjevi;
+            }
+
+            set
+            {
+                zahtjevi = value;
+            }
         }
     }
 }

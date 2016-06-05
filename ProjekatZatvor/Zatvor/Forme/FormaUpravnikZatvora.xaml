@@ -9,16 +9,16 @@
 
     <Grid Margin="0,0,10,10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="419*"/>
-            <RowDefinition Height="226*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <Button x:Name="button1" Content="Odbij zahtjev" HorizontalAlignment="Left" Margin="629,30,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1"/>
-        <Button x:Name="button2" Content="Odobri zahtjev" HorizontalAlignment="Left" Margin="779,30,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1"/>
-        <Button x:Name="button" Content="Prikaži zahtjev" HorizontalAlignment="Left" Margin="471,30,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1"/>
-        <Button x:Name="button3" Content="Dodaj uposlenika" HorizontalAlignment="Left" Margin="50,104,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button3_Click">
+        <Button x:Name="button1" Content="Odbij zahtjev" HorizontalAlignment="Left" Margin="471,64,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1" Click="button1_Click" Height="37" Width="129"/>
+        <Button x:Name="button2" Content="Odobri zahtjev" HorizontalAlignment="Left" Margin="815,64,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1" Click="button2_Click" Height="37" Width="142"/>
+        <Button x:Name="button" Content="Prikaži zahtjev" HorizontalAlignment="Left" Margin="639,64,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" BorderBrush="White" Grid.Row="1" Click="button_Click" Height="37" Width="137"/>
+        <Button x:Name="button3" Content="Dodaj uposlenika" HorizontalAlignment="Left" Margin="50,104,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button3_Click" Height="37">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -26,7 +26,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="button2_Copy" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="50,281,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button2_Copy_Click">
+        <Button x:Name="button2_Copy" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="50,277,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button2_Copy_Click" Height="37">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -34,7 +34,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="button4" Content="Prikaži listu uposlenika" HorizontalAlignment="Left" Margin="50,160,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button4_Click">
+        <Button x:Name="button4" Content="Prikaži listu uposlenika" HorizontalAlignment="Left" Margin="50,160,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button4_Click" Height="37">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -42,7 +42,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="button5" Content="Prikaži listu zatvorenika" HorizontalAlignment="Left" Margin="50,218,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White">
+        <Button x:Name="button5" Content="Prikaži listu zatvorenika" HorizontalAlignment="Left" Margin="50,218,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button5_Click" Height="37" Width="212">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -50,12 +50,12 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="button1_Copy" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="779,116,0,0" VerticalAlignment="Top" Width="142" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Grid.Row="1" Click="button1_Copy_Click"/>
+        <Button x:Name="button1_Copy" Content="Log out" HorizontalAlignment="Left" Height="44" Margin="886,10,0,0" VerticalAlignment="Top" Width="104" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button1_Copy_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="50,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333" Foreground="White">
         	<Run Text="Dobrodošao Ime_i_"/>
         	<Run FontStyle="Italic" Text="Prezime"/>
         </TextBlock>
-        <Button x:Name="button2_Copy1" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="50,281,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Visibility="Collapsed" Click="button2_Copy1_Click">
+        <Button x:Name="button2_Copy1" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="50,277,0,0" VerticalAlignment="Top" FontSize="18.667" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Width="212" Click="button2_Copy1_Click" Height="37" Visibility="Collapsed">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -64,7 +64,7 @@
             </Button.BorderBrush>
         </Button>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="49" Margin="10,167,0,0" Grid.Row="1" VerticalAlignment="Top" Width="46" Source="ms-appx:///Assets/ALARM.mp3" Volume="2" AutoPlay="False"/>
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="367" Margin="471,41,0,0" VerticalAlignment="Top" Width="450" Header="Zahtjevi" Foreground="Black" FontSize="18.667" FontWeight="Bold" Background="{ThemeResource ButtonBackgroundThemeBrush}">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="367" Margin="471,84,0,0" VerticalAlignment="Top" Width="450" Header="Zahtjevi" Foreground="Black" FontSize="18.667" FontWeight="Bold" Background="{ThemeResource ButtonBackgroundThemeBrush}" Grid.RowSpan="2">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -72,6 +72,7 @@
                 </LinearGradientBrush>
             </ListView.BorderBrush>
         </ListView>
+        <Button x:Name="button1_Copy1" Content="?" HorizontalAlignment="Left" Height="51" Margin="836,4,0,0" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Copy1_Click" RenderTransformOrigin="2.044,0.412"/>
 
     </Grid>
 </Page>

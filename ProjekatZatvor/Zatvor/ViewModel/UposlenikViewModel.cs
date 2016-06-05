@@ -12,12 +12,17 @@ namespace Zatvor.ViewModel
 {
     public class UposlenikViewModel : Uposlenik
     {
-        public bool ValidirajUposlenika(string ime, string prezime , string jmbg )
+        public bool ValidirajUposlenika(string ime, string prezime , string jmbg,string adresa, string funkcija )
         {
             try
             {
+                if (ime == "") throw (new Exception());
+                if (prezime == "") throw (new Exception());
+                if (adresa == "") throw (new Exception());
+                if (jmbg == "") throw (new Exception());
+                if (funkcija == "") throw (new Exception());
                 //Ime
-            int unesenaDuzinaImena = ime.Length;
+                int unesenaDuzinaImena = ime.Length;
             int duzinaImena = 0;
             foreach (char c in ime)
             {
@@ -64,6 +69,17 @@ namespace Zatvor.ViewModel
             catch(Exception e)
             {
                 return false;
+            }
+        }
+        public void ObrisiUposlenika(Uposlenik u)
+        {
+            foreach (Uposlenik p in DataSourceLikovi.k.Uposlenici)
+            {
+                if (u.Login_podaci.Username.Equals(p.Login_podaci.Username))
+                {
+                    DataSourceLikovi.k.Uposlenici.Remove(p);
+                    break;
+                }
             }
         }
     }

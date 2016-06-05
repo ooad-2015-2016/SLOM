@@ -5,20 +5,21 @@
     xmlns:local="using:Zatvor.Forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="348" Width="335">
+    mc:Ignorable="d" Height="262.5" Width="338">
 
-    <Grid>
+    <Grid Margin="-118,-38,0,0">
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="76,134,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Height="45" Width="204" Click="button2_Click"/>
-        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="45" Margin="76,202,0,0" VerticalAlignment="Top" Width="204" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Click="button1_Click"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="28,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333" Foreground="White">
+        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="130,179,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Height="45" Width="204" Click="button2_Click"/>
+        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="42" Margin="339,8,0,0" VerticalAlignment="Top" Width="96" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="70,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333" Foreground="White">
         	<Run Text="Dobrodošao Ime_i_"/>
         	<Run FontStyle="Italic" Text="Prezime"/>
         </TextBlock>
         <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="53" Margin="43,270,0,0" VerticalAlignment="Top" Width="53" Source="ms-appx:///Assets/ALARM.mp3" AutoPlay="False"/>
-        <Button x:Name="button2_Copy" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="76,134,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Height="45" Width="204" Visibility="Collapsed" Click="button2_Copy_Click"/>
+        <Button x:Name="button2_Copy" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="130,179,0,0" VerticalAlignment="Top" BorderBrush="#FFFFFEFE" FontSize="18.667" Foreground="White" Height="45" Width="204" Visibility="Collapsed" Click="button2_Copy_Click"/>
+        <Button x:Name="button1_Copy1" Content="?" HorizontalAlignment="Left" Height="51" Margin="294,5,0,0" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Copy1_Click" RenderTransformOrigin="2.044,0.412"/>
 
     </Grid>
 </Page>

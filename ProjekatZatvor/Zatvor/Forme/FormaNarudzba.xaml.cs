@@ -32,16 +32,15 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
+        List<Narudzba> narudzbenica = new List<Narudzba>();
         private async void button_Click(object sender, RoutedEventArgs e)
         {
-            //List<Narudzba> narudzbe = new List<Narudzba>();
             NarudzbaViewModel n = new NarudzbaViewModel();
             if (n.ValidirajNarudzbu(tNaziv.Text, tKolicina.Text))
             {
                 Narudzba nova = n.KreirajNarudzbu(tNaziv.Text, tKolicina.Text);
-                //narudzbe.Add(nova);
-                listView.Items.Add(tNaziv.Text + "          " + tKolicina.Text + " kom");
+                narudzbenica.Add(nova);
+                listView.Items.Add(nova);
 
             }
 
@@ -55,10 +54,25 @@ namespace Zatvor.Forme
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            if (testniHepek.Text.Equals("MedicinskiRadnik"))
-                  this.Frame.Navigate(typeof(FormaMedicinskiRadnik));
-            else 
-                  this.Frame.Navigate(typeof(FormaRadnikUKantini));
+            List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
+            foreach (Uposlenik u in uposlenici)
+            {
+                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                {
+                    if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
+                    {
+                        List<string> podaci = new List<string>();
+                        podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), podaci);
+                    }
+                    else if (u.FunkcijaUposlenika.Equals("Radnik u kantini"))
+                    {
+                        List<string> podaci = new List<string>();
+                        podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
+                        this.Frame.Navigate(typeof(FormaRadnikUKantini), podaci);
+                    }
+                }
+            }
         }
 
         private void tNaziv_TextChanged(object sender, TextChangedEventArgs e)
@@ -73,23 +87,55 @@ namespace Zatvor.Forme
             listView.Items.Clear();
         }
 
-        private void button3_Copy_Click(object sender, RoutedEventArgs e)
+        private async void button3_Copy_Click(object sender, RoutedEventArgs e)
         {
-            listView.Items.Remove(listView.SelectedItem);
+            Narudzba nar = (Narudzba)listView.SelectedItem;
+            try
+            {
+                listView.Items.Remove(listView.SelectedItem);
+                foreach (Narudzba n in narudzbenica) 
+                {
+                    if (n.ImeArtikla.Equals(nar.ImeArtikla) && n.KolicinaArtikla.Equals(nar.KolicinaArtikla))
+                    {
+                        
+                        narudzbenica.Remove(n);
+                    }
+                }
+                
+            }
+            catch (Exception )
+            {
+                //MessageDialog dialog = new MessageDialog("Niste odabrali stavku", "Greška");
+                //await dialog.ShowAsync();
+            }
+
         }
 
         private async void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageDialog dialog = new MessageDialog("Zahtjev uspješno poslan", "Obavještenje");
-            await dialog.ShowAsync();
-        }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if (e.Parameter is string)
+            try
             {
-                testniHepek.Text = e.Parameter.ToString();
+                foreach (Narudzba n in narudzbenica)
+                {
+                    DataSource.DataSourceLikovi.Narudzbe.Add(n);
+                }
+                MessageDialog dialog = new MessageDialog("Zahtjev uspješno poslan", "Obavještenje");
+                tNaziv.Text = "";
+                tKolicina.Text = "";
+                listView.Items.Clear();
+                await dialog.ShowAsync();
             }
+            catch(Exception)
+            {
+                MessageDialog dialog = new MessageDialog("Došlo je do greške", "Obavještenje");
+                await dialog.ShowAsync();
+            }
+        }
+            protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            testniHepek.Text = e.Parameter.ToString();
             base.OnNavigatedTo(e);
         }
+    
     }
 }

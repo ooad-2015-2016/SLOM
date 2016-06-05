@@ -16,6 +16,7 @@ using Zatvor.Klase;
 using Zatvor_pokusaj2.Klase;
 using Zatvor.DataSource;
 using Zatvor.ViewModel;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,12 +36,13 @@ namespace Zatvor.Forme
         {
             this.Frame.Navigate(typeof(FormaLogin));
         }
-
+        Alarm a = new Alarm();
         private void button2_Copy_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Stop();
             button2.Visibility = Visibility.Visible;
             button2_Copy.Visibility = Visibility.Collapsed;
+            a.t = false;
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -48,6 +50,8 @@ namespace Zatvor.Forme
             mediaElement.Play();
             button2_Copy.Visibility = Visibility.Visible;
             button2.Visibility = Visibility.Collapsed;
+            a.t = true;
+            a.Toggle();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -61,6 +65,13 @@ namespace Zatvor.Forme
                 }
             }
             base.OnNavigatedTo(e);
+        }
+
+        private async void button1_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            string poruka = "Korisnički interfejs koji je dostupan stražaru sadrži funkcionalnosti:\n\n- Aktiviraj alarm - opcija za aktivaciju alarma.\n\n- Logout - odjava sa sistema.";
+            MessageDialog dialog = new MessageDialog(poruka, "Help");
+            await dialog.ShowAsync();
         }
     }
 }

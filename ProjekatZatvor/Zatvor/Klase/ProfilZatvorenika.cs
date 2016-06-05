@@ -22,8 +22,9 @@ namespace Zatvor_pokusaj2.Klase
         private char tezinaPrekrsaja;
         private Celija celija;
         private int duzinaTrajanjaKazne;
+        private ZdravstveniKarton medicinskiKarton;
 
-        public ProfilZatvorenika(string ime, string prezime, string adresaStanovanja, string brojtelefona, DateTime datumRodjenja, string brojLicneKarte, string dodatniOpis, double visina, double tezina, bool osudjivanRanije)
+        public ProfilZatvorenika(string ime, string prezime, string adresaStanovanja, string brojtelefona, DateTime datumRodjenja, string brojLicneKarte, string dodatniOpis, double visina, double tezina, bool osudjivanRanije, int id)
         {
             this.ime = ime;
             this.osudjivanRanije = osudjivanRanije;
@@ -35,6 +36,7 @@ namespace Zatvor_pokusaj2.Klase
             this.brojLicneKarte = brojLicneKarte;
             this.dodatniOpis = dodatniOpis;
             this.brojTelefona = brojtelefona;
+            this.IdZatvorenika = id;
         }
 
         public string Ime
@@ -219,9 +221,40 @@ namespace Zatvor_pokusaj2.Klase
             }
         }
 
+        public ZdravstveniKarton MedicinskiKarton
+        {
+            get
+            {
+                return medicinskiKarton;
+            }
+
+            set
+            {
+                medicinskiKarton = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Ime i prezime: " + Ime + " " + Prezime + ", Broj LK: " + brojLicneKarte + ", ID: " + IdZatvorenika;
+        }
         public void AzurirajPodatke(ProfilZatvorenika pz)
         {
 
+        }
+        public ProfilZatvorenika(ProfilZatvorenika p)
+        {
+            this.ime = p.ime;
+            this.osudjivanRanije = p.osudjivanRanije;
+            this.prezime = p.prezime;
+            this.datumRodjenja = p.datumRodjenja;
+            this.visina = p.visina;
+            this.tezina = p.tezina;
+            this.adresaStanovanja = p.adresaStanovanja;
+            this.brojLicneKarte = p.brojLicneKarte;
+            this.dodatniOpis = p.dodatniOpis;
+            this.brojTelefona = p.brojTelefona;
+            this.IdZatvorenika = p.IdZatvorenika;
         }
     }
 }

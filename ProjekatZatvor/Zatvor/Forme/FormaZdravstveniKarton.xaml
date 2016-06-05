@@ -12,8 +12,7 @@
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Canvas.Background>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Osnovni podaci " VerticalAlignment="Top" Width="372" FontSize="18.667" SelectionChanged="textBlock_SelectionChanged" Canvas.Left="68" Canvas.Top="47" Foreground="White"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="115" FontSize="18.667" Canvas.Left="68" Canvas.Top="100" Foreground="White"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="115" FontSize="18.667" Canvas.Left="68" Canvas.Top="147" Foreground="White"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Ime i prezime" VerticalAlignment="Top" Width="115" FontSize="18.667" Canvas.Left="68" Canvas.Top="115" Foreground="White"/>
         <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Zdravstveni karton" VerticalAlignment="Top" Width="372" FontSize="18.667" Canvas.Left="558" Canvas.Top="47" Foreground="White"/>
         <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Dijagnoza" VerticalAlignment="Top" Width="87" FontSize="18.667" Canvas.Left="558" Canvas.Top="100" Foreground="White"/>
         <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" FontSize="18.667" Canvas.Left="558" Canvas.Top="235" Foreground="White">
@@ -21,15 +20,13 @@
 			<LineBreak/>
 			<Run/>
         </TextBlock>
-        <TextBox x:Name="tIme" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139" BorderBrush="{x:Null}" Foreground="Black" Canvas.Left="234" Canvas.Top="98" FontSize="18.667"/>
-        <TextBox x:Name="tPrezime" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139" BorderBrush="{x:Null}" Foreground="Black" Canvas.Left="232" Canvas.Top="145" FontSize="18.667"/>
         <TextBox x:Name="tDijagnoza" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="372" Foreground="Black" BorderBrush="{x:Null}" Canvas.Left="558" Canvas.Top="134" FontSize="18.667"/>
         <TextBox x:Name="tTerapija" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="372" BorderBrush="{x:Null}" Foreground="Black" Canvas.Left="558" Canvas.Top="269" FontSize="18.667"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="Broj kartona" VerticalAlignment="Top" Width="115" FontSize="18.667" Canvas.Left="68" Canvas.Top="197" Foreground="White"/>
-        <TextBox x:Name="tBrKartona" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="139" BorderBrush="{x:Null}" Foreground="Black" Canvas.Left="232" Canvas.Top="194" FontSize="18.667" Height="34"/>
-        <Button x:Name="button" Content="Log out" Height="45" Canvas.Left="821" Canvas.Top="408" Width="109" Foreground="White" BorderBrush="White" FontSize="18.667" Click="button_Click"/>
-        <Button x:Name="button1" Content="Nazad" Canvas.Left="682" Canvas.Top="408" Foreground="White" BorderBrush="White" Width="107" Height="45" FontSize="18.667" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Kreiraj karton" Height="45" Canvas.Left="232" Canvas.Top="281" Width="139" FontSize="18.667" Background="{x:Null}" BorderBrush="White" Foreground="White" Click="button2_Click"/>
-        <Button x:Name="button1_Copy" Content="Reset" Canvas.Left="538" Canvas.Top="408" Foreground="White" BorderBrush="White" Width="107" Height="45" FontSize="18.667" Click="button1_Click"/>
+        <Button x:Name="button1" Content="Nazad" Canvas.Left="47" Canvas.Top="459" Foreground="White" BorderBrush="White" Width="107" Height="45" FontSize="18.667" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Kreiraj karton" Height="45" Canvas.Left="791" Canvas.Top="459" Width="139" FontSize="18.667" Background="{x:Null}" BorderBrush="White" Foreground="White" Click="button2_Click"/>
+        <Button x:Name="button1_Copy" Content="Reset" Canvas.Left="650" Canvas.Top="459" Foreground="White" BorderBrush="White" Width="107" Height="45" FontSize="18.667" Click="button1_Copy_Click"/>
+        <TextBlock x:Name="testniHepek" Canvas.Left="154" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="380" Visibility="Collapsed"/>
+        <ComboBox x:Name="comboBox" Canvas.Left="232" Canvas.Top="115" Width="208" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" FontSize="18.667" Canvas.Left="68" Canvas.Top="166" Foreground="White"/>
     </Canvas>
 </Page>

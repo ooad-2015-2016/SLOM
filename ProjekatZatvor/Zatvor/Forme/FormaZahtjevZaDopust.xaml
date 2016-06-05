@@ -5,43 +5,46 @@
     xmlns:local="using:Zatvor.Forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="468.75" Width="710">
+    mc:Ignorable="d" Height="484.5" Width="682">
 
-    <Grid Margin="0,-13,10,-25">
+    <Grid Margin="-0.023,-13.009,0.977,-1.009" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Grid.RenderTransform>
+            <CompositeTransform Rotation="-0.11"/>
+        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="96*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <DatePicker x:Name="pocetak" HorizontalAlignment="Left" Margin="316,157,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2"/>
-        <DatePicker x:Name="kraj" HorizontalAlignment="Left" Margin="316,219,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="75,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Datum početka dopusta:" Foreground="White"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="75,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Foreground="White">
+        <DatePicker x:Name="pocetak" HorizontalAlignment="Left" Margin="316,157,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2" Height="37" Width="296"/>
+        <DatePicker x:Name="kraj" HorizontalAlignment="Left" Margin="316,219,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2" Height="37" Width="296"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="75,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Text="Datum početka dopusta:" Foreground="White" Height="25" Width="236"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="75,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Height="25" Width="200">
         	<Run Text="Datum k"/>
         	<Run Text="r"/>
         	<Run Text="aja dopusta"/>
         	<Run Text=":"/>
         </TextBlock>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="75,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Foreground="White">
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="75,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18.667" Foreground="White" Height="50" Width="214">
     		<Run Text="Ime i prezime zatvorenika"/>
     		<Run Text=":"/>
     		<LineBreak/>
     		<Run/>
         </TextBlock>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="316,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="316,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="96" Width="296" FontSize="18.667" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="75,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.419,2.25" FontSize="18.667" Foreground="White">
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="75,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.419,2.25" FontSize="18.667" Foreground="White" Height="50" Width="181">
     		<Run Text="Obrazloženje zahtjeva"/>
     		<LineBreak/>
     		<Run Text=" za dopust"/>
     		<Run Text=":"/>
         </TextBlock>
-        <Button x:Name="button" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="77,389,0,0" VerticalAlignment="Top" BorderBrush="White" FontSize="18.667" Foreground="White" Grid.Column="1"/>
-        <Button x:Name="button_Copy" Content="Log out" HorizontalAlignment="Left" Margin="77,447,0,0" VerticalAlignment="Top" BorderBrush="White" FontSize="18.667" Foreground="White" Grid.Column="1" Width="135"/>
+        <Button x:Name="button" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="83.973,400,0,0" VerticalAlignment="Top" BorderBrush="White" FontSize="18.667" Foreground="White" Grid.Column="1" Click="button_Click" Height="37" Width="135"/>
         <TextBlock x:Name="textBlock2_Copy" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="White" Text="Zahtjev za dopust " Height="44" Width="214" FontWeight="Bold"/>
-        <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Grid.ColumnSpan="2" Margin="316,389,0,0"/>
-        <Button x:Name="button2" Content="Nazad" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button2_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="316,447,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="316,400,0,0" Grid.ColumnSpan="2"/>
+        <Button x:Name="button2" Content="Nazad" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button2_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="10,400,0,0"/>
+        <TextBlock x:Name="testniHepek" HorizontalAlignment="Left" Margin="75,369,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed" Height="0" Width="0"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="316,89,0,0" VerticalAlignment="Top" Width="296" Height="37" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

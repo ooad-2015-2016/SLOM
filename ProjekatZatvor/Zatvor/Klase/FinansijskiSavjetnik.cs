@@ -10,6 +10,7 @@ namespace Zatvor_pokusaj2.Klase
 {
     public class FinansijskiSavjetnik : Uposlenik
     {
+        private List<List<Narudzba>> listaNarudzbi = new List<List<Narudzba>>();
         public FinansijskiSavjetnik(string ime, string prezime, DateTime datumRodjenja, string jMBG, string adresaStanovanja, string funkcijaUposlenika, Korisnik login_podaci)
         {
             this.Ime = ime;
@@ -19,6 +20,19 @@ namespace Zatvor_pokusaj2.Klase
             this.AdresaStanovanja = adresaStanovanja;
             this.FunkcijaUposlenika = funkcijaUposlenika;
             this.Login_podaci = login_podaci;
+        }
+
+        public List<List<Narudzba>> ListaNarudzbi
+        {
+            get
+            {
+                return listaNarudzbi;
+            }
+
+            set
+            {
+                listaNarudzbi = value;
+            }
         }
     }
 }

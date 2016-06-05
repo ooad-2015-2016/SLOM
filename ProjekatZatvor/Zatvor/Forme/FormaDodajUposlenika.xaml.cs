@@ -32,46 +32,54 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FormaLogin));
-        }
-
         private async void button1_Click(object sender, RoutedEventArgs e)
         {
             UposlenikViewModel u = new UposlenikViewModel();
-            if (u.ValidirajUposlenika(tIme.Text, tPrezime.Text, tJMBG.Text))
-                   {
-                string ime = tIme.Text;
-                string prezime = tPrezime.Text;
-                string adresa = tAdresa.Text;
-                string JMBG = tJMBG.Text;
-                DateTime datumRodjenja = tDatumRodjenja.Date.DateTime;
-                string funkcija = comboBox.SelectedItem.ToString();
-                Korisnik podaci = new Korisnik(tIme.Text + "." + tPrezime.Text, tIme.Text + "123");
-                if (funkcija == "Radnik u kantini")
+            try {
+                if (u.ValidirajUposlenika(tIme.Text, tPrezime.Text, tJMBG.Text, tAdresa.Text, comboBox.SelectedItem.ToString()))
                 {
-                    (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor.Klase.RadnikUKantini(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    string ime = tIme.Text;
+                    string prezime = tPrezime.Text;
+                    string adresa = tAdresa.Text;
+                    string JMBG = tJMBG.Text;
+                    DateTime datumRodjenja = new DateTime();
+                    if (DateTime.Today.Year - tDatumRodjenja.Date.Year >= 18)
+                    {
+                      datumRodjenja = tDatumRodjenja.Date.DateTime;
+                    }
+                    else throw (new Exception());                
+                    string funkcija = comboBox.SelectedItem.ToString();
+                    Korisnik podaci = new Korisnik(tIme.Text + "." + tPrezime.Text, tIme.Text + "123");
+                    if (funkcija == "Radnik u kantini")
+                    {
+                        (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor.Klase.RadnikUKantini(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    }
+                    if (funkcija == "Strazar")
+                    {
+                        (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.Strazar(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    }
+                    if (funkcija == "Cuvar")
+                    {
+                        (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor.Klase.Cuvar(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    }
+                    if (funkcija == "Medicinski radnik")
+                    {
+                        (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.MedicinskiRadnik(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    }
+                    if (funkcija == "Finansijski savjetnik")
+                    {
+                        (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.FinansijskiSavjetnik(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    }
+                    MessageDialog dialog = new MessageDialog("Uposlenik dodan.\nUsername: " + ime + "." + prezime + "\nPassword: " + ime + "123", "Obavijest");
+                    await dialog.ShowAsync();
                 }
-                if (funkcija == "Strazar")
+                else
                 {
-                    (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.Strazar(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
-                }
-                if (funkcija == "Cuvar")
-                {
-                    (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor.Klase.Cuvar(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
-                }
-                if (funkcija == "Medicinski radnik")
-                {
-                    (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.MedicinskiRadnik(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
-                }
-                if (funkcija == "Finansijski savjetnik")
-                {
-                    (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajUposlenikaNaListu(new Zatvor_pokusaj2.Klase.FinansijskiSavjetnik(ime, prezime, datumRodjenja, JMBG, adresa, funkcija, podaci));
+                    MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli podatke", "Greška");
+                    await dialog.ShowAsync();
                 }
             }
-            else
+            catch
             {
                 MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli podatke", "Greška");
                 await dialog.ShowAsync();

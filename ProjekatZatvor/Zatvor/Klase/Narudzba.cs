@@ -73,5 +73,12 @@ namespace Zatvor_pokusaj2.Klase
             this.IdNarudzbe = System.Threading.Interlocked.Increment(ref brojac);
             this.StatusNarudzbe = statusNarudzbe;
         }
+        public override string ToString()
+        {
+            string status = "Odobrena";
+            if (StatusNarudzbe == false)
+                status = "Odbijena";
+            return ImeArtikla + "          " + KolicinaArtikla + " kom" + "     Status: " + status;
+        }
     }
 }

@@ -13,9 +13,13 @@ namespace Zatvor.ViewModel
     {
         public bool ValidirajNarudzbu(string naziv, string kolicina)
         {
+           
+
             bool validna = true;
             try
             {
+                if (naziv == "") throw (new Exception());
+                if (kolicina == "") throw (new Exception());
                 double kol = Convert.ToDouble(kolicina);
             }
             catch (Exception)

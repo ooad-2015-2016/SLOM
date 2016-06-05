@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Zatvor.ViewModel;
+using Zatvor_pokusaj2.Klase;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,88 +34,97 @@ namespace Zatvor.Forme
         {
 
         }
-
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            string ime = tIme.Text;
-            string prezime = tPrezime.Text;
-            int brojKartona = Convert.ToInt32(tBrKartona.Text);
-            string terapija = tTerapija.Text;
-            string dijagnoza = tDijagnoza.Text;
-            /*
-            //Validacija imena
-            string ime = tIme.Text;
-            int unesenaDuzinaImena = ime.Length;
-            int duzinaImena = 0;
-            foreach (char c in ime)
-            {
-                if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+             if (comboBox.Items.Count == 0)
+             {
+                 MessageDialog dialog = new MessageDialog("Ne postoji zatvorenik za kojeg možete krairati medicinski karton", "Greška");
+                 await dialog.ShowAsync();
+             }
+             else
+             {
+                List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.k.DajSveZatvorenike();
+                string zatvorenik = comboBox.SelectedItem.ToString();
+                ZdravstveniKartonViewModel n = new ZdravstveniKartonViewModel();
+                if (n.ValidirajZdravstveniKarton(tDijagnoza.Text, tTerapija.Text))
                 {
-                    duzinaImena++;
+                    string id = zatvorenik[0].ToString() + zatvorenik[1].ToString() + zatvorenik[2].ToString() + zatvorenik[3].ToString() + zatvorenik[4].ToString();
+                    foreach (ProfilZatvorenika p in zatvorenici)
+                    {
+                        if (p.IdZatvorenika.ToString() == id)
+                        {
+                            ZdravstveniKarton novi = n.KreirajZdravstveniKarton(p.Ime, p.Prezime, p.IdZatvorenika.ToString(), tDijagnoza.Text, tTerapija.Text);
+                            (ViewModel.KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajZdravstveniKarton(novi);
+                            p.MedicinskiKarton = novi;
+                            comboBox.Items.Remove(p.IdZatvorenika + " " + p.Ime + " " + p.Prezime);
+                            textBlock_Copy1.Text = "";
+                            break;
+                        }
+                    }
+                    MessageDialog dialog = new MessageDialog("Karton uspješno dodan", "Obavještenje");
+                    await dialog.ShowAsync();
+                }
+                else
+                {
+                    MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli podatke", "Greška");
+                    await dialog.ShowAsync();
                 }
             }
-            if (duzinaImena != unesenaDuzinaImena)
-            {
-                MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli ime", "Greška");
-                await dialog.ShowAsync();
-
-            }
-            // Kraj validacije imena
-
-            //Validacija prezimena
-            string prezime = tPrezime.Text;
-            int unesenaDuzinaPrezimena = prezime.Length;
-            int duzinaPrezimena = 0;
-            foreach (char c in prezime)
-            {
-                if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-                {
-                    duzinaPrezimena++;
-                }
-            }
-            if (duzinaPrezimena != unesenaDuzinaPrezimena)
-            {
-                MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli prezime", "Greška");
-                await dialog.ShowAsync();
-            }
-            // Kraj validacije prezimena
-
-            //Validacija za broj kartona
-            string brojKartona = tBrKartona.Text;
-            int unesenaDuzinaKartona = brojKartona.Length;
-            int duzinaKartona = 0;
-            foreach (char c in brojKartona)
-            {
-                if (c >= '0' && c <= '9')
-                {
-                    duzinaKartona++;
-                }
-            }
-            if (duzinaKartona != unesenaDuzinaKartona)
-            {
-                MessageDialog dialog = new MessageDialog("Pogrešno ste unijeli broj kartona", "Greška");
-                await dialog.ShowAsync();
-            }
-            //Kraj validacje za broj kartona */
+            
         }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FormaLogin));
-        }
-
+       
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaMedicinskiRadnik));
+            List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
+            foreach (Uposlenik u in uposlenici)
+            {
+                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                {
+                    if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
+                    {
+                        List<string> podaci = new List<string>();
+                        podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), podaci);
+                    }
+                }
+            }
         }
 
         private void button1_Copy_Click(object sender, RoutedEventArgs e)
         {
-            tIme.Text = "";
-            tPrezime.Text = "";
             tDijagnoza.Text = "";
             tTerapija.Text = "";
-            tBrKartona.Text = "";
+            textBlock_Copy1.Text = "";
+            comboBox.SelectedItem = null;
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            testniHepek.Text = e.Parameter.ToString();
+            List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.DajSveZatvorenike();
+            foreach(ProfilZatvorenika pz in zatvorenici)
+            {
+                if(pz.MedicinskiKarton==null)
+                {
+                    comboBox.Items.Add(pz.IdZatvorenika + " " + pz.Ime + " " + pz.Prezime);
+                }
+            }
+            base.OnNavigatedTo(e);
+        }
+
+        private async void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.k.DajSveZatvorenike();
+            try
+            {
+               
+                    string zatvorenik = comboBox.SelectedItem.ToString();
+                    string id = zatvorenik[0].ToString() + zatvorenik[1].ToString() + zatvorenik[2].ToString() + zatvorenik[3].ToString() + zatvorenik[4].ToString();
+                    textBlock_Copy1.Text = "Broj kartona: " + id;
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }

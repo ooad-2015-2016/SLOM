@@ -16,6 +16,7 @@ namespace Zatvor.Forme
         {
           try
             {
+                if (DateTime.Today.Year - datum.Year < 10) throw (new Exception());
                 int brojtelefona = Convert.ToInt32(brojtel);
                 double visina = Convert.ToDouble(vis);
                 double tezina = Convert.ToDouble(tez);

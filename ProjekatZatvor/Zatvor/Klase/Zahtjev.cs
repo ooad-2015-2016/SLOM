@@ -8,47 +8,70 @@ namespace Zatvor_pokusaj2.Klase
 {
     public class Zahtjev
     {
-        private int idZahtjeva;
-        private string vrstaZahtjeva;
-        private bool hitno;
+        private string podaciOZatvoreniku;
+        private string obrazlozenje;
+        private DateTime pocetniDatum;
+        private DateTime krajnjiDatum;
         private bool status; //True prihvacen, False odbijen
 
-        public int IdZahtjeva
+        public Zahtjev(string podaciOZatvoreniku, string obrazlozenje, DateTime pocetniDatum, DateTime krajnjiDatum, bool status)
+        {
+            this.podaciOZatvoreniku = podaciOZatvoreniku;
+            this.obrazlozenje = obrazlozenje;
+            this.pocetniDatum = pocetniDatum;
+            this.krajnjiDatum = krajnjiDatum;
+            this.status = status;
+        }
+
+        public string PodaciOZatvoreniku
         {
             get
             {
-                return idZahtjeva;
+                return podaciOZatvoreniku;
             }
 
             set
             {
-                idZahtjeva = value;
+                podaciOZatvoreniku = value;
             }
         }
 
-        public string VrstaZahtjeva
+        public string Obrazlozenje
         {
             get
             {
-                return vrstaZahtjeva;
+                return obrazlozenje;
             }
 
             set
             {
-                vrstaZahtjeva = value;
+                obrazlozenje = value;
             }
         }
 
-        public bool Hitno
+        public DateTime PocetniDatum
         {
             get
             {
-                return hitno;
+                return pocetniDatum;
             }
 
             set
             {
-                hitno = value;
+                pocetniDatum = value;
+            }
+        }
+
+        public DateTime KrajnjiDatum
+        {
+            get
+            {
+                return krajnjiDatum;
+            }
+
+            set
+            {
+                krajnjiDatum = value;
             }
         }
 
@@ -63,6 +86,15 @@ namespace Zatvor_pokusaj2.Klase
             {
                 status = value;
             }
+        }
+        public override string ToString()
+        {
+            if(this.Status)
+                return PodaciOZatvoreniku + " " + Obrazlozenje + " Status: ODOBREN";
+    
+            else
+                return PodaciOZatvoreniku + " " + Obrazlozenje +  "Status: ODBIJEN";
+
         }
     }
 }

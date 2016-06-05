@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Zatvor.Klase;
+using Zatvor.ViewModel;
 using Zatvor_pokusaj2.Klase;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -49,15 +50,21 @@ namespace Zatvor.Forme
         {
 
         }
-
-        private void button1_Copy_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FormaLogin));
-        }
-
         private void button2_click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaCuvar1));
+            List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
+            foreach (Uposlenik u in uposlenici)
+            {
+                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                {
+                    if (u.FunkcijaUposlenika.Equals("Cuvar"))
+                    {
+                        List<string> podaci = new List<string>();
+                        podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
+                        this.Frame.Navigate(typeof(FormaCuvar1), podaci);
+                    }
+                }
+            }
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
@@ -79,7 +86,10 @@ namespace Zatvor.Forme
                     osudjivan = true;
                 else if (radioButton1.IsChecked == true)
                     osudjivan = false;
-                ProfilZatvorenika pz = new ProfilZatvorenika(ime,prezime,adresa,brojTelefona,datumRodjenja,brojLicneKarte,opis,visina,tezina,osudjivan);
+                ProfilZatvorenika pz = new ProfilZatvorenika(ime,prezime,adresa,brojTelefona,datumRodjenja,brojLicneKarte,opis,visina,tezina,osudjivan,DataSource.DataSourceLikovi.Brojac); DataSource.DataSourceLikovi.Zavrti();
+                (KontejnerViewModel.KontejnerMetoda(DataSource.DataSourceLikovi.k)).DodajZatvorenikaNaListu(pz);
+                MessageDialog dialog = new MessageDialog("Zatvorenik uspješno dodan.", "Obavještenje");
+                await dialog.ShowAsync();
             }
             else
             {
@@ -102,6 +112,11 @@ namespace Zatvor.Forme
             radioButton.IsChecked = false;
             radioButton1.IsChecked = false;
             dDatumRodjenja.Date = DateTime.Today;
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            testniHepek.Text = e.Parameter.ToString();
+            base.OnNavigatedTo(e);
         }
     }
 }

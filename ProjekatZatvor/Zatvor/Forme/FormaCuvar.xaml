@@ -5,24 +5,34 @@
     xmlns:local="using:Zatvor.Forme"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="440" Width="624">
+    mc:Ignorable="d" Height="654" Width="1010">
 
-    <Grid Margin="0,0,0,31">
+    <Grid>
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout/>
+        </FlyoutBase.AttachedFlyout>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <Button x:Name="button5" Content="Otvori profil zatvorenika" HorizontalAlignment="Left" Margin="307,106,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Click="button_Click" Foreground="White"/>
+        <Button x:Name="button5" Content="Otvori profil zatvorenika" HorizontalAlignment="Left" Margin="302,166,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Click="button5_Click" Foreground="White"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" Margin="59,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Style="{StaticResource BodyTextBlockStyle}" IsColorFontEnabled="False" FontWeight="Bold" FontSize="21.333" Foreground="White">
     		<Run Text="Dobrodošao Ime_i_"/>
     		<Run FontStyle="Italic" Text="Prezime"/>
         </TextBlock>
-        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="39" Margin="307,315,0,0" VerticalAlignment="Top" Width="220" FontSize="18.667" BorderBrush="White" Click="button1_Click_1" Foreground="White"/>
-        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="307,261,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220" Click="button2_Click"/>
-        <Button x:Name="button4" Content="Kreiraj profil zatvorenika" HorizontalAlignment="Left" Margin="307,155,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Click="button4_Click" Foreground="White" Height="41"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="59,106,0,0" TextWrapping="Wrap" Text="Id zatvorenika:" FontSize="18.667" VerticalAlignment="Top" Height="37" Foreground="#FFFFEEEE"/>
-        <TextBox x:Name="tIdZatvorenika" HorizontalAlignment="Left" Margin="198,106,0,0" FontSize="18.667" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="37" Width="81"/>
-        <Button x:Name="button2_Copy" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="307,261,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220" Click="button2_Copy_Click" Visibility="Collapsed"/>
-        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" Margin="105,178,0,0" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/ALARM.mp3" AutoPlay="False"/>
-        <Button x:Name="button3" Content="Kreiraj zahtjev za dopust" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220"  Click="button3_Click" Margin="307,207,97,160"/>
+        <Button x:Name="button1" Content="Log out" HorizontalAlignment="Left" Height="39" Margin="820,28,0,0" VerticalAlignment="Top" Width="136" FontSize="18.667" BorderBrush="White" Click="button1_Click_1" Foreground="White" RenderTransformOrigin="-1.875,7.308"/>
+        <Button x:Name="button2" Content="Aktiviraj alarm" HorizontalAlignment="Left" Margin="702,377,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220" Click="button2_Click"/>
+        <Button x:Name="button4" Content="Kreiraj profil zatvorenika" HorizontalAlignment="Left" Margin="702,161,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Click="button4_Click" Foreground="White" Height="41"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="59,129,0,0" TextWrapping="Wrap" Text="Odaberi zatvorenika" FontSize="18.667" VerticalAlignment="Top" Height="37" Foreground="#FFFFEEEE"/>
+        <Button x:Name="button2_Copy" Content="Ugasi alarm" HorizontalAlignment="Left" Margin="702,377,0,0" VerticalAlignment="Top" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220" Click="button2_Copy_Click" Visibility="Collapsed"/>
+        <MediaElement x:Name="mediaElement" HorizontalAlignment="Left" Height="100" Margin="221,246,0,0" VerticalAlignment="Top" Width="100" Source="ms-appx:///Assets/ALARM.mp3" AutoPlay="False"/>
+        <Button x:Name="button3" Content="Kreiraj zahtjev za dopust" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220"  Click="buttonZahtjev_Click" Margin="702,304,88,308"/>
+        <Button x:Name="button3_Copy" Content="Prikaži listu zatvorenika" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18.667" BorderBrush="White" Foreground="White" Height="42" Width="220"  Click="button3_Click" Margin="702,232,88,380"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="302,161,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
+        <Button x:Name="button1_Copy1" Content="?" HorizontalAlignment="Left" Height="51" Margin="770,18,0,0" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Copy1_Click" RenderTransformOrigin="2.044,0.412"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="59,166,0,0" VerticalAlignment="Top" Width="220" Height="36"/>
+        <AutoSuggestBox PlaceholderText="Search" x:Name="autoSuggestBox" QueryIcon="Find"
+                TextChanged="AutoSuggestBox_TextChanged"
+                QuerySubmitted="AutoSuggestBox_QuerySubmitted"
+                SuggestionChosen="AutoSuggestBox_SuggestionChosen" Margin="59,283,488,0"/>
     </Grid>
 </Page>
