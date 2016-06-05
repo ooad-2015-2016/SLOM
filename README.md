@@ -51,4 +51,5 @@ Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je 
 -Kao eksterni uređaj je korišten ARDUINO na kojem se pale i gase lampice kada je alarm upaljen, odnosno ne dešava se ništa kada je alarm ugašen. Kod za arduino je implementiran u klasi Alarm. (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Klase/Alarm.cs). 
 Isto tako validacija za ovaj uređaj nije potrebna jer korisnik nema pristup bilo kakvim podacima o Arduinu. Kod se poziva unutar klasa u kojima se aktivira alarm, koje su navedene kod eksternog uređaja Zvučnik.
 
--Adaptive layout je urađen samo za određene forme.
+-Adaptive layout je urađen samo za određene forme. 
+(Primjer takve forme: https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Forme/FormaCuvar.xaml)
