@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/2 slika.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="275,256,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Height="32" Width="88" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594" Foreground="White"/>
-        <TextBox x:Name="tUsername" HorizontalAlignment="Left" Margin="377,256,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" FontSize="18.667">
+        <TextBlock x:Name="textBlock" Margin="275,256,637,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Height="32" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594" Foreground="White"/>
+        <TextBox x:Name="tUsername" Margin="377,256,271,351" TextWrapping="Wrap" Text="" FontSize="18.667">
             <TextBox.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -20,9 +20,9 @@
                 </LinearGradientBrush>
             </TextBox.Foreground>
         </TextBox>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="275,306,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="32" Width="83" FontSize="18.667" FontWeight="Bold" Foreground="#FFFFFEFE"/>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="46" Margin="403,360,0,0" VerticalAlignment="Top" Width="208" RenderTransformOrigin="0.517,0.414" FontSize="18.667" Background="#33060101" BorderBrush="White" Click="button_Click" Foreground="White"/>
-        <PasswordBox x:Name="tPassword" HorizontalAlignment="Left" Height="39" Margin="377,298,0,0" VerticalAlignment="Top" Width="352" FontSize="18.667"/>
+        <TextBlock x:Name="textBlock_Copy" Margin="275,306,642,306" TextWrapping="Wrap" Text="Password:" FontSize="18.667" FontWeight="Bold" Foreground="#FFFFFEFE"/>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Right" Margin="0,368,371,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.414" FontSize="18.667" Background="#33060101" BorderBrush="White" Click="button_Click" Foreground="White" Width="208" Height="46"/>
+        <PasswordBox x:Name="tPassword" Height="39" Margin="0,0,271,299" VerticalAlignment="Bottom" FontSize="18.667" HorizontalAlignment="Right" Width="352"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="56,19,0,0" TextWrapping="Wrap" Text="Pogresan unos!" VerticalAlignment="Top" Height="32" Width="162" FontSize="18.667" FontWeight="Bold" RenderTransformOrigin="0.036,0.594" RequestedTheme="Light" Visibility="Collapsed">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -31,6 +31,6 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Height="51" Margin="955,0,0,0" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Click"/>
+        <Button x:Name="button1" Content="?" HorizontalAlignment="Right" Height="51" VerticalAlignment="Top" Width="45" FontSize="26.667" FontWeight="Bold" Foreground="#FF002CF0" Click="button1_Click"/>
     </Grid>
 </Page>

@@ -16,6 +16,7 @@ using Zatvor.ViewModel;
 using Zatvor.DataSource;
 using Zatvor_pokusaj2.Klase;
 using Windows.UI.Popups;
+using Windows.Devices.Geolocation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -76,9 +77,14 @@ namespace Zatvor.Forme
         {
             this.Frame.Navigate(typeof(FormaLogin));
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            
+            var locator = new Geolocator();
+            locator.DesiredAccuracyInMeters = 10;
+            var position = await locator.GetGeopositionAsync();
+            BasicGeoposition bgp = new BasicGeoposition() { Latitude = position.Coordinate.Latitude, Longitude = position.Coordinate.Longitude };
+            Geopoint gp = new Geopoint(bgp);
+            await MyMap.TrySetViewAsync(position.Coordinate.Point, 18D);
             List<Uposlenik> upravnici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             List<string> podaci = (List<string>)e.Parameter;
             try
@@ -172,6 +178,14 @@ namespace Zatvor.Forme
             //sageDialog dialog = new MessageDialog("Pri pokretanju aplikacije, prvi prozor koji se otvori je LogIn.Kako bi svaki korisnik imao određene privilegije potrebno je unijeti Username i Password, koji su Case - Sensitive, te kliknuti na 'Login' .Ukoliko uneseni podaci nisu ispravni aplikacija će javiti poruku o neispravnom unosu.Ukoliko ste zaboravili korisničke podatke javite se administratoru(upravniku) koji će vam ih dati / kreirati.";
             MessageDialog dialog = new MessageDialog(poruka, "Help");
             await dialog.ShowAsync();
+        }
+
+        private async void textBlock_Copy_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            var locator = new Geolocator();
+            locator.DesiredAccuracyInMeters = 10;
+            var position = await locator.GetGeopositionAsync();
+            await MyMap.TrySetViewAsync(position.Coordinate.Point, 18D);
         }
     }
 }
