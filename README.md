@@ -39,3 +39,10 @@ Zatvor je ustanova u kojoj osuđenici izdržavaju zatvorsku kaznu. Zatvorska je 
 - Stražari (na ogradi/zidu, mogućnost paljenja alarma)
 - Čuvari (unutar zatvora, mogućnost paljenja alarma i kontrole ćelija)
 - Zatvorenici 
+
+
+###Eksterni uređaji
+-Koristi se GPS čiji se kod nalazi unutar forme FormaUpravnikZatvora (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Forme/FormaUpravnikZatvora.xaml.cs)
+-Koristi se zvučnik od uređaja na kojem je pokrenut, za validacijom nije bilo potrebe jer je urađeno koristeći mediaElement i jednostavno implementirano start stop dugme na koje se pali i gasi alarm. Ovaj kod imamo u sljedećim formama : FormaUpravnikZatvora, FormaCUvar, FormaStrazar. (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Forme/FormaUpravnikZatvora.xaml.cs), (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Forme/FormaCuvar.xaml.cs), (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Forme/FormaStrazar.xaml.cs).
+-Kao eksterni uređaj je korišten ARDUINO na kojem se pale i gase lampice kada je alarm upaljen, odnosno ne dešava se ništa kada je alarm ugašen i kod za arduino je implementiran u klasi Alarm. (https://github.com/ooad-2015-2016/SLOM/blob/master/ProjekatZatvor/Zatvor/Klase/Alarm.cs), isto tako validacija za ovaj uređaj nije potrebna jer korisnik nema pristup bilo kakvim podacima o arduinu. Kod se poziva unutar klasa u kojima se pali i alarm kao što su navedene u kod eksternog uređaja Zvučnik.
+-Adaptive layout nažalost nije uspješno urađen.
