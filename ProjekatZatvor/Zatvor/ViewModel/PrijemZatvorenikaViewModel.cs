@@ -16,8 +16,21 @@ namespace Zatvor.Forme
         {
           try
             {
-                if (DateTime.Today.Year - datum.Year < 10) throw (new Exception());
-                int brojtelefona = Convert.ToInt32(brojtel);
+                if (DateTime.Today.Year - datum.Year < 18) throw (new Exception());
+                string brojTelefon = brojtel;
+                int unesenaDuzinaTelefona = brojTelefon.Length;
+                int duzinaTelefona = 0;
+                foreach (char c in brojTelefon)
+                {
+                    if (c >= '0' && c <= '9')
+                    {
+                        duzinaTelefona++;
+                    }
+                }
+                if (duzinaTelefona != unesenaDuzinaTelefona)
+                {
+                    throw (new Exception());
+                }
                 double visina = Convert.ToDouble(vis);
                 double tezina = Convert.ToDouble(tez);
                 //Validacija imena

@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Zatvor.Forme;
+using Zatvor.Klase;
 
 namespace Zatvor
 {
@@ -68,7 +69,8 @@ namespace Zatvor
                 // When the navigation stack isn&#39;t restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(FormaLogin), e.Arguments);
+                Alarm a = new Alarm();
+                rootFrame.Navigate(typeof(FormaLogin),a);
             }
             // Ensure the current window is active
             Window.Current.Activate();
