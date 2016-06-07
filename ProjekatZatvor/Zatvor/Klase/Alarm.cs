@@ -42,14 +42,60 @@ namespace Zatvor.Forme
     {
         IStream connction;
         private RemoteDevice _arduino;
+        private List<string> podaci;
+        private Uposlenik uposlenik;
+        private ProfilZatvorenika profilZatvorenika;
         public Alarm()
         {
+            Podaci = new List<string>();
+            Uposlenik = null;
+            ProfilZatvorenika = null;
             var usb = new UsbSerial("VID_1A86", "PID_7523");
             _arduino = new RemoteDevice(usb);
             _arduino.DeviceReady += Setup;
             usb.begin(57600, SerialConfig.SERIAL_8N2);
         }
         public bool IsOn { get; private set; } = true;
+
+        public List<string> Podaci
+        {
+            get
+            {
+                return podaci;
+            }
+
+            set
+            {
+                podaci = value;
+            }
+        }
+
+        public Uposlenik Uposlenik
+        {
+            get
+            {
+                return uposlenik;
+            }
+
+            set
+            {
+                uposlenik = value;
+            }
+        }
+
+        public ProfilZatvorenika ProfilZatvorenika
+        {
+            get
+            {
+                return profilZatvorenika;
+            }
+
+            set
+            {
+                profilZatvorenika = value;
+            }
+        }
+
         public bool t = true;
 
         public async void Toggle()
