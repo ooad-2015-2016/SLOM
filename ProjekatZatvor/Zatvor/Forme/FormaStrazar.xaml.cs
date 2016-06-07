@@ -31,18 +31,17 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
+        Alarm alarmic = null;
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
-        Alarm a = new Alarm();
         private void button2_Copy_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Stop();
             button2.Visibility = Visibility.Visible;
             button2_Copy.Visibility = Visibility.Collapsed;
-            a.t = false;
+            alarmic.t = false;
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -50,13 +49,14 @@ namespace Zatvor.Forme
             mediaElement.Play();
             button2_Copy.Visibility = Visibility.Visible;
             button2.Visibility = Visibility.Collapsed;
-            a.t = true;
-            a.Toggle();
+            alarmic.t = true;
+            alarmic.Toggle();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            alarmic = (Alarm)e.Parameter;
             List<Uposlenik> strazari = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            List<string> podaci = alarmic.Podaci;
             foreach (Uposlenik s in strazari)
             {
                 if (s.Login_podaci.Username.Equals(podaci[0]))

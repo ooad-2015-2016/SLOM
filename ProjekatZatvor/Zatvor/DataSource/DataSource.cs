@@ -30,15 +30,15 @@ namespace Zatvor.DataSource
         };
         private static List<Cuvar> _cuvari = new List<Cuvar>()
         {
-            new Cuvar("Dzevad","Poturak",new DateTime(2008, 5, 1, 8, 30, 52),"1234567890123","Zmaja od Bosne bb.","Cuvar",new Korisnik("Cuvar","Cuvar123")),
-            new Cuvar("Nikola","Nakic",new DateTime(2008, 5, 1, 8, 30, 52),"1234567890124","Avde Hume 32","Cuvar",new Korisnik("Meho","Meho123")),
-            new Cuvar("Ivan","Herceg",new DateTime(2008, 5, 1, 8, 30, 52),"1234567890125","Fadila Jahića Spanca 33","Cuvar",new Korisnik("opala","Strazar123"))
+            new Cuvar("Dzevad","Poturak",new DateTime(1995, 5, 1, 8, 30, 52),"1234567890123","Zmaja od Bosne bb.","Cuvar",new Korisnik("Cuvar","Cuvar123")),
+            new Cuvar("Nikola","Nakic",new DateTime(1995, 5, 1, 8, 30, 52),"1234567890124","Avde Hume 32","Cuvar",new Korisnik("Nikola.Nakic","Nikola123")),
+            new Cuvar("Ivan","Herceg",new DateTime(1995, 5, 1, 8, 30, 52),"1234567890125","Fadila Jahića Spanca 33","Cuvar",new Korisnik("Ivan.Herceg","Ivan123"))
         };
         private static List<Strazar> _strazari = new List<Strazar>()
         {
-            new Strazar("Milorad","Dodik",new DateTime(2008, 5, 1, 8, 30, 52),"1234327890123","Laktaši 34","Strazar",new Korisnik("Strazar","Strazar123")),
-            new Strazar("Dragan","Covic",new DateTime(2008, 5, 1, 8, 30, 52),"1234567900124","Franje Tuđmana 25","Strazar",new Korisnik("opcup","beng")),
-            new Strazar("Bakir","Izetbegovic",new DateTime(2008, 5, 1, 8, 30, 52),"1232567890125","Alije Izetbegovica 32","Strazar",new Korisnik("mmm","grr"))
+            new Strazar("Milorad","Dodik",new DateTime(1995, 5, 1, 8, 30, 52),"1234327890123","Laktaši 34","Strazar",new Korisnik("Strazar","Strazar123")),
+            new Strazar("Dragan","Covic",new DateTime(1995, 5, 1, 8, 30, 52),"1234567900124","Franje Tuđmana 25","Strazar",new Korisnik("Dragan.Covic","Dragan123")),
+            new Strazar("Bakir","Izetbegovic",new DateTime(1995, 5, 1, 8, 30, 52),"1232567890125","Alije Izetbegovica 32","Strazar",new Korisnik("Bakir.Izetbegovic","Bakir123"))
         };
         private static List<MedicinskiRadnik> _medicinari = new List<MedicinskiRadnik>()
         {
@@ -60,7 +60,7 @@ namespace Zatvor.DataSource
         };*/
         private static List<FinansijskiSavjetnik> _finansijski = new List<FinansijskiSavjetnik>()
         {
-            new FinansijskiSavjetnik("Refko","Krampa", new DateTime(1997, 5, 1, 8, 30, 52),"1232527890123", "Vrazova 44","Finansijski savjetnik", new Korisnik("Refko.Krampa","Refko123"))           
+            new FinansijskiSavjetnik("Refko","Krampa", new DateTime(1995, 5, 1, 8, 30, 52),"1232527890123", "Vrazova 44","Finansijski savjetnik", new Korisnik("Refko.Krampa","Refko123"))           
         };
         private static List<RadnikUKantini> _kantiner = new List<RadnikUKantini>()
         {

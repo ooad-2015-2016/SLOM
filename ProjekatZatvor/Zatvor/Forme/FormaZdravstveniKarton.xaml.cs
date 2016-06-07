@@ -29,7 +29,7 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
+        Alarm alarmic = null;
         private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
@@ -78,13 +78,14 @@ namespace Zatvor.Forme
             List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             foreach (Uposlenik u in uposlenici)
             {
-                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                if (u.Login_podaci.Username.Equals(alarmic.Podaci[0]))
                 {
                     if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
-                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), alarmic);
                     }
                 }
             }
@@ -99,7 +100,7 @@ namespace Zatvor.Forme
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            testniHepek.Text = e.Parameter.ToString();
+            alarmic = (Alarm)e.Parameter;
             List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.DajSveZatvorenike();
             foreach(ProfilZatvorenika pz in zatvorenici)
             {

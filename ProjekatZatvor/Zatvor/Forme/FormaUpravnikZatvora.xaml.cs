@@ -18,6 +18,7 @@ using Zatvor_pokusaj2.Klase;
 using Windows.UI.Popups;
 using Windows.Devices.Geolocation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Zatvor.Forme
@@ -45,22 +46,22 @@ namespace Zatvor.Forme
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLista), KontejnerViewModel.KontejnerMetoda(DataSourceLikovi.k).DajSveUposlenike());
+            this.Frame.Navigate(typeof(FormaLista),alarmic);
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaDodajUposlenika));
+            this.Frame.Navigate(typeof(FormaDodajUposlenika),alarmic);
         }
 
 
-        Alarm a = new Alarm();
+        Alarm alarmic = null;
         private void button2_Copy1_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Stop();
             button2_Copy.Visibility = Visibility.Visible;
             button2_Copy1.Visibility = Visibility.Collapsed;
-            a.t = false;
+            alarmic.t = false;
 
         }
 
@@ -69,24 +70,18 @@ namespace Zatvor.Forme
             mediaElement.Play();
             button2_Copy.Visibility = Visibility.Collapsed;
             button2_Copy1.Visibility = Visibility.Visible;
-            a.t = true;
-            a.Toggle();
+            alarmic.t = true;
+            alarmic.Toggle();
         }
 
         private void button1_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            var locator = new Geolocator();
-            locator.DesiredAccuracyInMeters = 10;
-            var position = await locator.GetGeopositionAsync();
-            BasicGeoposition bgp = new BasicGeoposition() { Latitude = position.Coordinate.Latitude, Longitude = position.Coordinate.Longitude };
-            Geopoint gp = new Geopoint(bgp);
-            await MyMap.TrySetViewAsync(position.Coordinate.Point, 18D);
             List<Uposlenik> upravnici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            alarmic = (Alarm)e.Parameter;
             try
             {
                 foreach (Zahtjev z in DataSourceLikovi.Upravnik.Zahtjevi)
@@ -98,17 +93,23 @@ namespace Zatvor.Forme
             { }
             foreach (Uposlenik s in upravnici)
             {
-                if (s.Login_podaci.Username.Equals(podaci[0]))
+                if (s.Login_podaci.Username.Equals(alarmic.Podaci[0]))
                 {
                     textBlock.Text = "Dobrodošli " + s.Ime + " " + s.Prezime;
                 }
             }
+            var locator = new Geolocator();
+            locator.DesiredAccuracyInMeters = 10;
+            var position = await locator.GetGeopositionAsync();
+            await MyMap.TrySetViewAsync(position.Coordinate.Point, 18D);
+            alarmic.Uposlenik = null;
+            alarmic.ProfilZatvorenika = null;
             base.OnNavigatedTo(e);
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaListaZatvorenika), "Upravnik");
+            this.Frame.Navigate(typeof(FormaListaZatvorenika), alarmic);
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)

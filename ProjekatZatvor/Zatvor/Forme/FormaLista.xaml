@@ -17,6 +17,7 @@
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="427" VerticalAlignment="Top" Width="870" Margin="68,75,0,0" Header="Lista:" Foreground="Black" FontSize="18.667" FontWeight="Bold"  Background="#FF838181" SelectionChanged="listView_SelectionChanged"/>
         <Button x:Name="button1_Copy" Content="Nazad" HorizontalAlignment="Left" Height="44" Margin="68,563,0,0" VerticalAlignment="Top" Width="142" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button1_Copy_Click"/>
         <Button x:Name="button1_Copy1" Content="Obriši uposlenika" HorizontalAlignment="Left" Height="44" Margin="760,563,0,0" VerticalAlignment="Top" Width="178" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="DeleteButton_Click"/>
+        <Button x:Name="buttonEdit" Content="Edit" HorizontalAlignment="Left" Height="44" Margin="553,563,0,0" VerticalAlignment="Top" Width="178" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="buttonEdit_Click" RenderTransformOrigin="1.462,0.432"/>
 
     </Grid>
 </Page>

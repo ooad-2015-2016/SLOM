@@ -43,7 +43,7 @@
         <Button x:Name="button" Content="Pošalji zahtjev" HorizontalAlignment="Left" Margin="83.973,400,0,0" VerticalAlignment="Top" BorderBrush="White" FontSize="18.667" Foreground="White" Grid.Column="1" Click="button_Click" Height="37" Width="135"/>
         <TextBlock x:Name="textBlock2_Copy" HorizontalAlignment="Left" Margin="75,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="21.333" Foreground="White" Text="Zahtjev za dopust " Height="44" Width="214" FontWeight="Bold"/>
         <Button x:Name="button3" Content="Reset" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button3_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="316,400,0,0" Grid.ColumnSpan="2"/>
-        <Button x:Name="button2" Content="Nazad" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button2_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="10,400,0,0"/>
+        <Button x:Name="button2" Content="Nazad" FontSize="18.667" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button2_Click" Background="#33000000" BorderBrush="White" Foreground="White" Height="37" Width="117" Canvas.Left="528" Canvas.Top="408" Margin="75,400,0,0"/>
         <TextBlock x:Name="testniHepek" HorizontalAlignment="Left" Margin="75,369,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed" Height="0" Width="0"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="316,89,0,0" VerticalAlignment="Top" Width="296" Height="37" Grid.ColumnSpan="2"/>
     </Grid>

@@ -36,43 +36,43 @@ namespace Zatvor.Forme
         private void button_Click(object sender, RoutedEventArgs e)
         {
            // int brojKartona = Convert.ToInt32(tIdZatvorenika.Text);
-            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1));
+            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1),alarmic);
         }
 
         private void button1_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin), alarmic);
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1), textBlock2.Text);
+            this.Frame.Navigate(typeof(FormaPrijemZatvorenika1), alarmic);
         }
-        Alarm a = null;
+       // Alarm a = new Alarm();
         private void button2_Copy_Click(object sender, RoutedEventArgs e)
         {
             mediaElement.Stop();
             button2.Visibility = Visibility.Visible;
             button2_Copy.Visibility = Visibility.Collapsed;
-            a.t = false;
-            a = null;
+            alarmic.t = false;
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            a = new Alarm();
+           
             mediaElement.Play();
             button2_Copy.Visibility = Visibility.Visible;
             button2.Visibility = Visibility.Collapsed;
-            a.t = true;
-            a.Toggle();
+            alarmic.t = true;
+            alarmic.Toggle();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaListaZatvorenika), textBlock2.Text);// (KontejnerViewModel.KontejnerMetoda(DataSourceLikovi.k)).DajSveZatvorenike());
+            this.Frame.Navigate(typeof(FormaListaZatvorenika), alarmic);// (KontejnerViewModel.KontejnerMetoda(DataSourceLikovi.k)).DajSveZatvorenike());
 
         }
+        Alarm alarmic = null;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.k.DajSveZatvorenike();
@@ -81,22 +81,25 @@ namespace Zatvor.Forme
                 string zatvorenikList = pz.IdZatvorenika + " " + pz.Ime + " " + pz.Prezime;
                 comboBox.Items.Add(zatvorenikList);
             }
+            alarmic = (Alarm)e.Parameter;
             List<Uposlenik> cuvari = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            List<string> podaci = alarmic.Podaci;
             foreach (Uposlenik c in cuvari)
             {
                 if (c.Login_podaci.Username.Equals(podaci[0]))
                 {
                     textBlock.Text = "Dobrodošli " + c.Ime + " " + c.Prezime;
-                    textBlock2.Text = c.Login_podaci.Username;
+                    //textBlock2.Text = c.Login_podaci.Username;
                 }
             }
+            alarmic.Uposlenik = null;
+            alarmic.ProfilZatvorenika = null;
             base.OnNavigatedTo(e);
         }
 
         private void buttonZahtjev_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaZahtjevZaDopust), textBlock2.Text);
+            this.Frame.Navigate(typeof(FormaZahtjevZaDopust), alarmic);
         }
 
         private async void button5_Click(object sender, RoutedEventArgs e)

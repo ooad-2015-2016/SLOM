@@ -47,29 +47,30 @@ namespace Zatvor.Forme
                     List<string> prijava = new List<string>();
                     prijava.Add(uneseno.Username);
                     prijava.Add(uneseno.Password);
+                    alarmic.Podaci = prijava;
                     if (u.FunkcijaUposlenika.Equals("Strazar"))
                     {
-                        this.Frame.Navigate(typeof(FormaStrazar1), prijava);
+                        this.Frame.Navigate(typeof(FormaStrazar1), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Cuvar"))
                     {
-                        this.Frame.Navigate(typeof(FormaCuvar1), prijava);
+                        this.Frame.Navigate(typeof(FormaCuvar1), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Upravnik"))
                     {
-                        this.Frame.Navigate(typeof(FormaUpravnikZatvora1), prijava);
+                        this.Frame.Navigate(typeof(FormaUpravnikZatvora1), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Radnik u kantini"))
                     {
-                        this.Frame.Navigate(typeof(FormaRadnikUKantini), prijava);
+                        this.Frame.Navigate(typeof(FormaRadnikUKantini), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
                     {
-                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), prijava);
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Finansijski savjetnik"))
                     {
-                        this.Frame.Navigate(typeof(FormaFinansijskiSavjetnik1), prijava);
+                        this.Frame.Navigate(typeof(FormaFinansijskiSavjetnik1), alarmic);
                     }
                     break;
                 }
@@ -83,6 +84,18 @@ namespace Zatvor.Forme
         {
             MessageDialog dialog = new MessageDialog("Pri pokretanju aplikacije prvi prozor koji se otvora je 'Login'. Kako bi svaki korisnik imao određene privilegije potrebno je unijeti 'Username' i 'Password', koji su case-sensitive, te kliknuti na 'Login'.\nUkoliko uneseni podaci nisu ispravni aplikacija će javiti poruku o neispravnom unosu. \nUkoliko ste zaboravili korisničke podatke javite se administratoru (upravniku) koji će vam ih dati/kreirati.", "Help");
             await dialog.ShowAsync();
+        }
+        Alarm alarmic = null;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter==null)
+            {
+
+            }
+           else if(e.Parameter.GetType()==typeof(Alarm))
+            {
+                alarmic = (Alarm)e.Parameter;
+            }
         }
     }
 }

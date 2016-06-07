@@ -32,6 +32,7 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
+        Alarm alarmic = null;
         List<Narudzba> narudzbenica = new List<Narudzba>();
         private async void button_Click(object sender, RoutedEventArgs e)
         {
@@ -57,19 +58,21 @@ namespace Zatvor.Forme
             List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             foreach (Uposlenik u in uposlenici)
             {
-                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                if (u.Login_podaci.Username.Equals(alarmic.Podaci[0]))
                 {
                     if (u.FunkcijaUposlenika.Equals("Medicinski radnik"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
-                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaMedicinskiRadnik), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Radnik u kantini"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
-                        this.Frame.Navigate(typeof(FormaRadnikUKantini), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaRadnikUKantini), alarmic);
                     }
                 }
             }
@@ -133,7 +136,7 @@ namespace Zatvor.Forme
         }
             protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            testniHepek.Text = e.Parameter.ToString();
+            alarmic = (Alarm)e.Parameter;
             base.OnNavigatedTo(e);
         }
     

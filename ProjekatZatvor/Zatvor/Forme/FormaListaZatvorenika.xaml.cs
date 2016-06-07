@@ -37,13 +37,14 @@ namespace Zatvor.Forme
         {
 
         }
+        Alarm alarmic = null;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            testniHepek.Text = e.Parameter.ToString();
-            base.OnNavigatedTo(e);
+            alarmic = (Alarm)e.Parameter;
             List<ProfilZatvorenika> zatvorenici = (KontejnerViewModel.KontejnerMetoda(DataSourceLikovi.k)).DajSveZatvorenike();
             foreach (ProfilZatvorenika u in zatvorenici)
                 listView.Items.Add(u);
+            base.OnNavigatedTo(e);
         }
 
         private void button1_Copy_Click(object sender, RoutedEventArgs e)
@@ -51,32 +52,61 @@ namespace Zatvor.Forme
             List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             foreach (Uposlenik u in uposlenici)
             {
-                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                if (u.Login_podaci.Username.Equals(alarmic.Podaci[0]))
                 {
                     if (u.FunkcijaUposlenika.Equals("Upravnik"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add("Upravnik"); podaci.Add("Upravnik123");
-                        this.Frame.Navigate(typeof(FormaUpravnikZatvora1), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaUpravnikZatvora1), alarmic);
                     }
                     else if (u.FunkcijaUposlenika.Equals("Cuvar"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
-                        this.Frame.Navigate(typeof(FormaCuvar1), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaCuvar1), alarmic);
                     }
                 }
             }
         }
 
-        private async void Delete_Click(object sender, RoutedEventArgs e)
+        private async void button1_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            ProfilZatvorenika pz = (ProfilZatvorenika)listView.SelectedItem;
-            ProfilZatvorenikaViewModel pwm = new ProfilZatvorenikaViewModel();
-            pwm.ObrisiProfilZatvorenika(pz);
-            listView.Items.Remove(listView.SelectedItem);
-            MessageDialog dialog = new MessageDialog("Zatvorenik obrisan", "Obavještenje");
-            await dialog.ShowAsync();
+            if (listView.SelectedItem != null)
+            {
+                ProfilZatvorenika pz = (ProfilZatvorenika)listView.SelectedItem;
+                ProfilZatvorenikaViewModel pwm = new ProfilZatvorenikaViewModel();
+                pwm.ObrisiProfilZatvorenika(pz);
+                listView.Items.Remove(listView.SelectedItem);
+                MessageDialog dialog = new MessageDialog("Zatvorenik obrisan", "Obavještenje");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Niste odabrali zatvorenika", "Greška");
+                await dialog.ShowAsync();
+            }
         }
-    }
+
+        private void Button_Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void button1_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+            if(listView.SelectedItem!=null)
+            {
+                alarmic.ProfilZatvorenika = (ProfilZatvorenika)listView.SelectedItem;
+                this.Frame.Navigate(typeof(FormaPrijemZatvorenika1),alarmic);
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Niste odabrali zatvorenika", "Greška");
+                await dialog.ShowAsync();
+            }
+        }
+   }
 }

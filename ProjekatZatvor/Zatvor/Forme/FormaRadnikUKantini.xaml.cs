@@ -31,17 +31,19 @@ namespace Zatvor.Forme
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaNarudzb1a), textBlock2.Text);
+            this.Frame.Navigate(typeof(FormaNarudzb1a), alarmic);
         }
+        Alarm alarmic = null;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            alarmic = (Alarm)e.Parameter;
             List<Uposlenik> kuhari = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            List<string> podaci = alarmic.Podaci;
             foreach (Uposlenik c in kuhari)
             {
                 if (c.Login_podaci.Username.Equals(podaci[0]))
@@ -50,6 +52,8 @@ namespace Zatvor.Forme
                     textBlock2.Text = c.Login_podaci.Username;
                 }
             }
+            alarmic.Uposlenik = null;
+            alarmic.ProfilZatvorenika = null;
             base.OnNavigatedTo(e);
         }
 

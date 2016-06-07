@@ -36,28 +36,38 @@ namespace Zatvor.Forme
 
         private async void button1_Click(object sender, RoutedEventArgs e)
         {
-            Narudzba n = (Narudzba)listView.SelectedItem;
-            listView.Items.Remove(n);
-            n.StatusNarudzbe = true;
-            listView.Items.Add(n);
-            foreach (Narudzba na in DataSource.DataSourceLikovi.Narudzbe)
+            if (listView.SelectedItem != null)
             {
-                if (na.Equals(n))
-                    na.StatusNarudzbe = true;
-            }
+                Narudzba n = (Narudzba)listView.SelectedItem;
+                listView.Items.Remove(n);
+                n.StatusNarudzbe = true;
+                listView.Items.Add(n);
+                foreach (Narudzba na in DataSource.DataSourceLikovi.Narudzbe)
+                {
+                    if (na.Equals(n))
+                        na.StatusNarudzbe = true;
+                }
 
-            MessageDialog dialog = new MessageDialog("Narudzba odobrena", "Obavještenje");
-            await dialog.ShowAsync();
+                MessageDialog dialog = new MessageDialog("Narudzba odobrena", "Obavještenje");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Niste odabrali narudžbu", "Greška");
+                await dialog.ShowAsync();
+            }
         }
 
         private void button1_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
+        Alarm alarmic = null;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             int brojac = 0;
             List < Narudzba > narudzbe = DataSource.DataSourceLikovi.Narudzbe;
+            alarmic = (Alarm)e.Parameter;
             foreach(Narudzba narudzbenica in narudzbe)
             {
                 listView.Items.Add(narudzbenica);
@@ -66,7 +76,7 @@ namespace Zatvor.Forme
             brojZahtjeva.Text = brojac.ToString();
 
             List<Uposlenik> finanseri = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            List<string> podaci = alarmic.Podaci;
             foreach (Uposlenik c in finanseri)
             {
                 if (c.Login_podaci.Username.Equals(podaci[0]))
@@ -80,28 +90,45 @@ namespace Zatvor.Forme
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
-            Narudzba n = (Narudzba)listView.SelectedItem;
-            string status = "";
-            if (n.StatusNarudzbe)
-                status = "Odobrena";
-            else status = "Odbijena";
-            MessageDialog dialog = new MessageDialog(n.ImeArtikla + "      " + n.KolicinaArtikla + "   Status: " + status, "Obavještenje");
-            await dialog.ShowAsync();
+            if (listView.SelectedItem != null)
+            {
+                Narudzba n = (Narudzba)listView.SelectedItem;
+                string status = "";
+                if (n.StatusNarudzbe)
+                    status = "Odobrena";
+                else status = "Odbijena";
+                MessageDialog dialog = new MessageDialog(n.ImeArtikla + "      " + n.KolicinaArtikla + "   Status: " + status, "Obavještenje");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Niste odabrali narudžbu", "Greška");
+                await dialog.ShowAsync();
+            }
         }
 
         private async void button2_Click(object sender, RoutedEventArgs e)
         {
-            Narudzba n = (Narudzba)listView.SelectedItem;
-            listView.Items.Remove(n);
-            n.StatusNarudzbe = false;
-            listView.Items.Add(n);
-            foreach (Narudzba na in DataSource.DataSourceLikovi.Narudzbe)
+            if (listView.SelectedItem != null)
             {
-                if (na.Equals(n))
-                    na.StatusNarudzbe = false;
+                Narudzba n = (Narudzba)listView.SelectedItem;
+                listView.Items.Remove(n);
+                n.StatusNarudzbe = false;
+                listView.Items.Add(n);
+                foreach (Narudzba na in DataSource.DataSourceLikovi.Narudzbe)
+                {
+                    if (na.Equals(n))
+                        na.StatusNarudzbe = false;
+                }
+                MessageDialog dialog = new MessageDialog("Narudzba odbijena", "Obavještenje");
+                await dialog.ShowAsync();
             }
-            MessageDialog dialog = new MessageDialog("Narudzba odbijena", "Obavještenje");
-            await dialog.ShowAsync();
+            else
+            {
+                MessageDialog dialog = new MessageDialog("Niste odabrali narudžbu", "Greška");
+                await dialog.ShowAsync();
+            }
+
         }
 
         private async void button1_Copy1_Click(object sender, RoutedEventArgs e)

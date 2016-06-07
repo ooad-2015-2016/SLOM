@@ -17,7 +17,8 @@
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="427" VerticalAlignment="Top" Width="870" Margin="68,75,0,0" Header="Lista:" Foreground="Black" FontSize="18.667" FontWeight="Bold"  Background="#FF838181" SelectionChanged="listView_SelectionChanged"/>
         <Button x:Name="button1_Copy" Content="Nazad" HorizontalAlignment="Left" Height="44" Margin="68,549,0,0" VerticalAlignment="Top" Width="142" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button1_Copy_Click"/>
         <TextBlock x:Name="testniHepek" HorizontalAlignment="Left" Margin="281,593,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Collapsed"/>
-        <Button x:Name="button1_Copy1" Content="Obriši zatvorenika" HorizontalAlignment="Left" Height="44" Margin="764,549,0,0" VerticalAlignment="Top" Width="174" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="Delete_Click"/>
+        <Button x:Name="button1_Copy1" Content="Obriši zatvorenika" HorizontalAlignment="Left" Height="44" Margin="764,549,0,0" VerticalAlignment="Top" Width="174" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button1_Copy1_Click"/>
+        <Button x:Name="button1_Copy2" Content="Edit" HorizontalAlignment="Left" Height="44" Margin="531,549,0,0" VerticalAlignment="Top" Width="174" FontSize="18.667" BorderBrush="White" Background="{ThemeResource AppBarItemBackgroundThemeBrush}" Foreground="White" Click="button1_Copy2_Click"/>
 
     </Grid>
 </Page>

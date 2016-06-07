@@ -31,7 +31,7 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
+        Alarm alarmic = null;
         private async void button1_Click(object sender, RoutedEventArgs e)
         {
             List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.k.DajSveZatvorenike();
@@ -53,20 +53,21 @@ namespace Zatvor.Forme
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaZdravstveniKarton),textBlock2.Text);
+            this.Frame.Navigate(typeof(FormaZdravstveniKarton),alarmic);
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaNarudzb1a),textBlock2.Text);
+            this.Frame.Navigate(typeof(FormaNarudzb1a),alarmic);
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            alarmic = (Alarm)e.Parameter;
             List<ProfilZatvorenika> zatvorenici = DataSourceLikovi.k.DajSveZatvorenike();
             foreach(ProfilZatvorenika pz in zatvorenici)
             {
@@ -76,15 +77,17 @@ namespace Zatvor.Forme
                 }
             }
             List<Uposlenik> medicinari = DataSource.DataSourceLikovi.k.DajSveUposlenike();
-            List<string> podaci = (List<string>)e.Parameter;
+            List<string> podaci = alarmic.Podaci;
             foreach (Uposlenik c in medicinari)
             {
                 if (c.Login_podaci.Username.Equals(podaci[0]))
                 {
                     textBlock.Text = "Dobrodošli " + c.Ime + " " + c.Prezime;
-                    textBlock2.Text = c.Login_podaci.Username;
+                   // textBlock2.Text = c.Login_podaci.Username;
                 }
             }
+            alarmic.Uposlenik = null;
+            alarmic.ProfilZatvorenika = null;
             base.OnNavigatedTo(e);
         }
 

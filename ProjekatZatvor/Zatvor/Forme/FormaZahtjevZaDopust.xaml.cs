@@ -28,7 +28,7 @@ namespace Zatvor.Forme
         {
             this.InitializeComponent();
         }
-
+        Alarm alarmic = null;
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             comboBox.SelectedItem = null;
@@ -42,31 +42,32 @@ namespace Zatvor.Forme
             List<Uposlenik> uposlenici = DataSource.DataSourceLikovi.k.DajSveUposlenike();
             foreach (Uposlenik u in uposlenici)
             {
-                if (u.Login_podaci.Username.Equals(testniHepek.Text))
+                if (u.Login_podaci.Username.Equals(alarmic.Podaci[0]))
                 {
                     if (u.FunkcijaUposlenika.Equals("Cuvar"))
                     {
                         List<string> podaci = new List<string>();
                         podaci.Add(u.Login_podaci.Username); podaci.Add(u.Login_podaci.Password);
-                        this.Frame.Navigate(typeof(FormaCuvar1), podaci);
+                        alarmic.Podaci = podaci;
+                        this.Frame.Navigate(typeof(FormaCuvar1), alarmic);
                     }
                 }
             }
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            alarmic = (Alarm)e.Parameter;
             List<ProfilZatvorenika> zatvorenici = DataSource.DataSourceLikovi.k.DajSveZatvorenike();
             foreach(ProfilZatvorenika pz in zatvorenici)
             {
                 comboBox.Items.Add(pz.Ime + " " + pz.Prezime);
             }
-            testniHepek.Text = e.Parameter.ToString();
             base.OnNavigatedTo(e);
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FormaLogin));
+            this.Frame.Navigate(typeof(FormaLogin),alarmic);
         }
 
         private async void button_Click(object sender, RoutedEventArgs e)
